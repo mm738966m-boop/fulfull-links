@@ -1,0 +1,260 @@
+<title>ユメカネ総合窓口 応答設定</title>
+<style>
+  :root{
+    --bg:#fcfcfb; --card:#fff; --ink:#1a1d24; --ink2:#5b6270; --ink3:#8a909c;
+    --line:#e6e7ea; --sunk:#f5f6f4; --key:#0f7a3d; --keybg:#eaf5ee; --keyline:#c6e3d1;
+    --bad:#b23a32; --warn:#9a6a12;
+  }
+  :root:not([data-theme="light"]){
+    @media (prefers-color-scheme: dark){
+      --bg:#1a1a19; --card:#232322; --ink:#f0f0ee; --ink2:#b4b6bb; --ink3:#85888f;
+      --line:#33332f; --sunk:#1f1f1e; --key:#5fce93; --keybg:#1d2a22; --keyline:#2f4a3a;
+      --bad:#e8867e; --warn:#d9ab55;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1a1a19; --card:#232322; --ink:#f0f0ee; --ink2:#b4b6bb; --ink3:#85888f;
+    --line:#33332f; --sunk:#1f1f1e; --key:#5fce93; --keybg:#1d2a22; --keyline:#2f4a3a;
+    --bad:#e8867e; --warn:#d9ab55;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);padding:32px 20px 60px;line-height:1.6;
+    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",system-ui,sans-serif}
+  .wrap{max-width:1040px;margin:0 auto}
+  h1{font-size:20px;margin:0 0 4px;text-wrap:balance}
+  .sub{color:var(--ink3);font-size:13px;margin-bottom:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin-bottom:18px}
+  .card h2{font-size:15px;margin:0 0 2px;text-wrap:balance}
+  .cap{font-size:12px;color:var(--ink3);margin:0 0 14px}
+  .scroll{overflow-x:auto}
+  table{border-collapse:collapse;width:100%;font-size:13px;min-width:640px}
+  th,td{padding:10px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+  th{color:var(--ink3);font-weight:600;font-size:12px;white-space:nowrap}
+  .name{font-weight:700}
+  .note{font-size:12px;color:var(--ink2);margin-top:3px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+    word-break:break-all;background:transparent}
+  .copy{margin-left:8px;font-size:11px;padding:3px 9px;border:1px solid var(--line);
+    background:transparent;color:var(--ink2);border-radius:6px;cursor:pointer;white-space:nowrap}
+  .copy:hover{color:var(--ink)}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;
+    color:var(--c);border:1px solid var(--c);white-space:nowrap}
+  p{margin:0 0 12px;max-width:66ch}
+  p:last-child{margin-bottom:0}
+  .lead{font-size:14px;color:var(--ink2)}
+
+  /* 会話の再現 */
+  .talk{display:flex;flex-direction:column;gap:8px;margin:0 0 16px}
+  .bub{max-width:min(30ch,80%);padding:9px 13px;border-radius:14px;font-size:13px;line-height:1.5;
+    border:1px solid var(--line);background:var(--sunk);white-space:pre-line}
+  .bub.me{align-self:flex-end;background:var(--card)}
+  .bub .tag{display:block;font-size:10px;color:var(--ink3);margin-bottom:3px;letter-spacing:.06em}
+  .verdict{font-size:12px;font-weight:700;margin-top:4px}
+  .ok{color:var(--key)} .ng{color:var(--bad)}
+
+  /* 判定の流れ */
+  .steps{list-style:none;counter-reset:s;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .steps li{counter-increment:s;display:flex;gap:12px;font-size:13px;color:var(--ink2);align-items:flex-start}
+  .steps li::before{content:counter(s);flex:none;width:22px;height:22px;border-radius:50%;
+    border:1px solid var(--line);color:var(--ink3);font-size:11px;font-weight:700;
+    display:grid;place-items:center;margin-top:1px;font-variant-numeric:tabular-nums}
+  .steps li.hit{color:var(--ink)}
+  .steps li.hit::before{border-color:var(--bad);color:var(--bad)}
+
+  /* キーワードチップ */
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+    padding:5px 11px;border-radius:8px;cursor:pointer;
+    border:1px solid var(--keyline);background:var(--keybg);color:var(--key);font-weight:700}
+  .chip:hover{filter:brightness(1.06)}
+  .chip:focus-visible,.copy:focus-visible{outline:2px solid var(--key);outline-offset:2px}
+  .chip.done{opacity:.55}
+
+  /* コピーできる本文 */
+  .block{background:var(--sunk);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;font-size:13px;white-space:pre-line;line-height:1.7;margin:0 0 8px}
+  .blockrow{display:flex;justify-content:flex-end}
+
+  ul.plain{margin:0;padding-left:1.2em;font-size:13px;color:var(--ink2)}
+  ul.plain li{margin-bottom:6px}
+  ul.plain li:last-child{margin-bottom:0}
+  .check{list-style:none;padding:0;margin:0;font-size:13px}
+  .check li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);color:var(--ink2)}
+  .check li:last-child{border-bottom:0;padding-bottom:0}
+  .check li::before{content:"";flex:none;width:15px;height:15px;border:1.5px solid var(--ink3);
+    border-radius:4px;margin-top:3px}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(8px);
+    background:var(--ink);color:var(--bg);font-size:12px;padding:8px 16px;border-radius:999px;
+    opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media (prefers-reduced-motion:reduce){.toast{transition:none}}
+</style>
+<div class="wrap">
+<h1>ユメカネ総合窓口 応答設定</h1>
+<div class="sub">「決める日」の分岐が④で止まる件 ― 原因と直しかた／2026-08-29</div>
+
+<section class="card">
+  <h2>起きていること</h2>
+  <p class="cap">2026-08-29 06:29 のやりとり（Hiroe Usune さん）</p>
+  <div class="talk">
+    <div class="bub me">決める日</div>
+    <div class="bub"><span class="tag">応答メッセージ</span>「わたしの新NISA、決める日」ですね。
+①一般枠 ②ベーシック会員 ③プラチナ会員 ④fulfullで契約中
+数字でお答えください。</div>
+    <div class="verdict ok">↑ キーワード「決める日」は一致している</div>
+    <div class="bub me">④</div>
+    <div class="bub"><span class="tag">応答メッセージ</span>申し訳ありませんが、このアカウントでは個別のお問い合わせを受け付けておりません。次の配信までお待ちください</div>
+    <div class="verdict ng">↑ 一律応答（キーワード未設定の受け皿）が返っている</div>
+  </div>
+  <p>最後の「受け付けておりません」は、<strong>キーワードを設定していない応答メッセージ＝一律応答</strong>です。応答メッセージはこの順で判定します。</p>
+  <ol class="steps">
+    <li>送られた文字が、どれかの応答メッセージのキーワードに<strong>完全一致</strong>するか探す</li>
+    <li>一致すれば、その応答メッセージを返す</li>
+    <li class="hit">一致がひとつも無ければ、キーワード未設定の一律応答を返す ← 今ここに落ちている</li>
+  </ol>
+  <p class="note" style="margin-top:14px">つまり「④」は<strong>どのキーワードにも一致していません</strong>。「決める日」は通っているので、応答モード・応答メッセージ機能・06:29 という時間帯は正常です。壊れているのは④（および①②③）の受け皿だけです。</p>
+</section>
+
+<section class="card">
+  <h2>原因</h2>
+  <p class="cap">可能性の高い順。①が本命で、②③は同時に起きていることが多い</p>
+  <div class="scroll"><table>
+    <tr><th>原因</th><th>中身</th><th>確度</th></tr>
+    <tr>
+      <td><div class="name">丸数字と登録キーワードの文字ちがい</div></td>
+      <td>
+        キーワードは完全一致のみ。<code>④</code>（丸数字）・<code>4</code>（半角）・<code>４</code>（全角）は<strong>すべて別の文字</strong>として扱われます。
+        <div class="note">メニュー本文が「①②③④」と丸数字で見せているので、読者は丸数字をそのまま返します。登録側を「4」や「４」で作っていると、永久に一致しません。</div>
+      </td>
+      <td><span class="badge" style="--c:#b23a32">本命</span></td>
+    </tr>
+    <tr>
+      <td><div class="name">①〜④の応答メッセージが未作成・オフ</div></td>
+      <td>
+        分岐メニューまでは作ったが、受け皿4本を作る前に終わっている／作ったが「利用する」をオンにしていない。
+        <div class="note">昨日つくったばかりなら十分ありえます。まず4本が一覧に並んでいるか確認してください。</div>
+      </td>
+      <td><span class="badge" style="--c:#9a6a12">高</span></td>
+    </tr>
+    <tr>
+      <td><div class="name">案内文が答え方を指定していない</div></td>
+      <td>
+        「数字でお答えください」だけだと、読者ごとに <code>④</code> <code>4</code> <code>４</code> <code>4番</code> <code>プラチナ</code> とバラバラの返信が来ます。1種類しか登録していなければ大半が一律応答に落ちます。
+      </td>
+      <td><span class="badge" style="--c:#9a6a12">高</span></td>
+    </tr>
+    <tr>
+      <td><div class="name">一律応答の文面が窓口と矛盾している</div></td>
+      <td>
+        こちらから「数字で答えて」と聞いておいて、外れたら「個別のお問い合わせは受け付けていません」と返すのは、読者から見ると門前払いです。分岐窓口を運用する間は、やり直しを促す文にしておくべきです。
+      </td>
+      <td><span class="badge" style="--c:#5b6270">設計</span></td>
+    </tr>
+    <tr>
+      <td><div class="name">応答メッセージは会話の状態を持たない</div></td>
+      <td>
+        1問1答なので「直前にメニューを出した」ことを覚えていません。「④」はアカウント全体で共通のキーワードになります。<strong>数字で答えさせる窓口を2本以上作ると、キーワードが衝突して別シナリオの返信が返ります。</strong>
+        <div class="note">今は1本なので実害はありませんが、増やすときは必ずここで事故ります。恒久策は最下段に。</div>
+      </td>
+      <td><span class="badge" style="--c:#5b6270">構造</span></td>
+    </tr>
+  </table></div>
+</section>
+
+<section class="card">
+  <h2>登録するキーワード</h2>
+  <p class="cap">4本の応答メッセージそれぞれに、下の表記ゆれを全部キーワードとして登録する。チップをタップするとコピーできます。</p>
+  <div class="scroll"><table>
+    <tr><th>分岐</th><th>キーワード（1つの応答メッセージにまとめて登録）</th></tr>
+    <tr>
+      <td><div class="name">① 一般枠</div></td>
+      <td><div class="chips" data-keys="①,1,１,1番,１番,①番,➀,❶,一般枠,一般"></div></td>
+    </tr>
+    <tr>
+      <td><div class="name">② ベーシック会員</div></td>
+      <td><div class="chips" data-keys="②,2,２,2番,２番,②番,➁,❷,ベーシック,ベーシック会員"></div></td>
+    </tr>
+    <tr>
+      <td><div class="name">③ プラチナ会員</div></td>
+      <td><div class="chips" data-keys="③,3,３,3番,３番,③番,➂,❸,プラチナ,プラチナ会員"></div></td>
+    </tr>
+    <tr>
+      <td><div class="name">④ fulfullで契約中</div></td>
+      <td><div class="chips" data-keys="④,4,４,4番,４番,④番,➃,❹,fulfull,フルフル,契約中"></div></td>
+    </tr>
+  </table></div>
+  <p class="note" style="margin-top:14px"><strong>注意：</strong>同じキーワードを2つの応答メッセージに登録しないこと。両方に一致すると両方送られてしまいます。キーワードの登録数に上限が出たら、丸数字・半角・全角の3種（<code>④</code> <code>4</code> <code>４</code>）だけは必ず残してください。</p>
+</section>
+
+<section class="card">
+  <h2>差し替える文面</h2>
+  <p class="cap">キーワードを足すだけでは取りこぼしが残ります。2か所の文面もあわせて直します。</p>
+
+  <p class="name" style="font-size:13px;margin-bottom:6px">メニューの最後の1行</p>
+  <div class="block" id="t1">①〜④の数字を、そのままコピーして送ってください。</div>
+  <div class="blockrow"><button class="copy" data-target="t1">コピー</button></div>
+
+  <p class="name" style="font-size:13px;margin:16px 0 6px">一律応答（窓口の運用中はこちらに）</p>
+  <div class="block" id="t2">メッセージありがとうございます！
+うまく受け取れませんでした🙏
+①②③④ のいずれかを送っていただけますか？</div>
+  <div class="blockrow"><button class="copy" data-target="t2">コピー</button></div>
+  <p class="note" style="margin-top:10px">「個別のお問い合わせは受け付けておりません」の文は、窓口を閉じたあとに戻せば大丈夫です。一律応答をオフにする手もありますが、外した読者が無反応になるので差し替えを推奨します。</p>
+</section>
+
+<section class="card">
+  <h2>作業チェックリスト</h2>
+  <p class="cap">LINE公式アカウントマネージャー → 自動応答メッセージ → 応答メッセージ（所要15分ほど）</p>
+  <ul class="check">
+    <li>①〜④の応答メッセージが4本とも存在し、「利用する」がオンになっている</li>
+    <li>4本それぞれに、上の表のキーワードを登録した</li>
+    <li>4本とも応答時間帯が「24時間」になっている（時間帯を絞ると早朝の返信が落ちます）</li>
+    <li>同じキーワードが2本以上に入っていない</li>
+    <li>メニューの最後の1行を差し替えた</li>
+    <li>一律応答の文面を差し替えた</li>
+    <li>自分のLINEから「決める日」→「④」を送って、④の返信が返ることを確認した</li>
+    <li>続けて「4」「４」でも送って、同じ返信が返ることを確認した</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>次に検討すること</h2>
+  <p class="cap">窓口を増やすなら、数字の一問一答から先に進めておく</p>
+  <ul class="plain">
+    <li><strong>リッチメニュー／カードタイプメッセージのボタンにする。</strong>タップなので表記ゆれがゼロになり、キーワードの衝突も起きません。分岐が4つ程度ならこれが一番かんたんで確実です。</li>
+    <li><strong>UTAGE のシナリオ分岐に寄せる。</strong>会話の状態を持てるので「決める日の直後の④」として扱えます。ただし Webhook 連携中は LINE 側の応答メッセージも同時に動くため、<strong>移す場合は LINE 側の一律応答を必ずオフに</strong>してください。二重に返信が飛びます。</li>
+    <li><strong>窓口ごとにキーワードを一意にする。</strong>どうしてもテキスト回答で続けるなら「決める日1」のように接頭辞をつけると衝突しません（読者の手間は増えます）。</li>
+  </ul>
+</section>
+
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">コピーしました</div>
+<script>
+const toast = document.getElementById('toast');
+let toastTimer;
+function flash(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>toast.classList.remove('show'), 1400);
+}
+async function put(text){
+  try { await navigator.clipboard.writeText(text); flash('コピーしました：' + text.slice(0,18)); }
+  catch(e){ flash('コピーできませんでした。長押しで選択してください'); }
+}
+document.querySelectorAll('.chips').forEach(box=>{
+  box.dataset.keys.split(',').forEach(k=>{
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.textContent = k;
+    b.setAttribute('aria-label', k + ' をコピー');
+    b.onclick = ()=>{ put(k); b.classList.add('done'); };
+    box.appendChild(b);
+  });
+});
+document.querySelectorAll('.copy').forEach(b=>{
+  b.onclick = ()=> put(document.getElementById(b.dataset.target).textContent.trim());
+});
+</script>
