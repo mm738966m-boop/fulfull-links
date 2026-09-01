@@ -7,37 +7,44 @@
     --bg:#1a1a19; --card:#232322; --ink:#f0f0ee; --ink2:#b4b6bb; --ink3:#85888f; --line:#33332f; }}
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);padding:32px 20px 60px;line-height:1.6;
-    font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",system-ui,sans-serif}
+    font-size:16px;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",system-ui,sans-serif}
   .wrap{max-width:1040px;margin:0 auto}
-  h1{font-size:20px;margin:0 0 4px}
-  .sub{color:var(--ink3);font-size:13px;margin-bottom:22px}
+  h1{font-size:24px;margin:0 0 6px}
+  .sub{color:var(--ink2);font-size:14px;margin-bottom:8px}
+  .legend{font-size:14px;color:var(--ink2);margin-bottom:24px}
+  .legend .badge{margin-right:6px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:12px;
     padding:20px 22px;margin-bottom:18px}
-  .card h2{font-size:15px;margin:0 0 2px}
-  .cap{font-size:12px;color:var(--ink3);margin:0 0 14px}
+  .card h2{font-size:19px;font-weight:700;margin:0 0 4px}
+  .cap{font-size:14px;color:var(--ink2);margin:0 0 16px}
   .scroll{overflow-x:auto}
-  table{border-collapse:collapse;width:100%;font-size:13px;min-width:720px}
+  table{border-collapse:collapse;width:100%;font-size:15px;font-weight:500;min-width:760px}
   th,td{padding:10px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-  th{color:var(--ink3);font-weight:600;font-size:12px;white-space:nowrap}
+  th{color:var(--ink2);font-weight:700;font-size:14px;white-space:nowrap}
   .name{font-weight:700}
-  .note{font-size:12px;color:var(--ink2);margin-top:3px}
-  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  .note{font-size:14px;color:var(--ink2);margin-top:5px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;
     word-break:break-all;background:transparent}
   .urlcell{width:46%}
-  .copy{margin-left:8px;font-size:11px;padding:3px 9px;border:1px solid var(--line);
+  .copy{margin-left:8px;font-size:13px;font-weight:600;padding:4px 11px;border:1px solid var(--line);
     background:transparent;color:var(--ink2);border-radius:6px;cursor:pointer;white-space:nowrap}
   .copy:hover{color:var(--ink)}
-  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:999px;
+  .badge{display:inline-block;font-size:13px;font-weight:700;padding:3px 11px;border-radius:999px;
     color:var(--c);border:1px solid var(--c);white-space:nowrap}
-  .where{font-size:12px;color:var(--ink2)}
+  .where{font-size:14px;color:var(--ink2)}
 </style></head><body><div class="wrap">
 <h1>URL一覧</h1>
-<div class="sub">更新 2026-08-13</div>
+<div class="sub">更新 2026-09-01</div>
+<div class="legend">
+  <span class="badge" style="--c:#2E6FB7">使用中</span>そのまま配ってよい　
+  <span class="badge" style="--c:#C0392B">LP未登録</span>配ってはいるが流入元が記録されない　
+  <span class="badge" style="--c:#8a909c">使わない</span>方針として配らない
+</div>
 
 
   <section class="card">
     <h2>お金の増やし方勉強会（LP経由・流入元べつ）</h2>
-    <p class="cap">すべて同じLPが開き、ページ内のLINEボタンが流入元ごとのIDに自動で書き換わる。誰がどこから来たかが読者一覧に1人ずつ記録される。</p>
+    <p class="cap">すべて同じLPが開き、ページ内のLINEボタンが流入元ごとのIDに自動で書き換わる。誰がどこから来たかが読者一覧に1人ずつ記録される。「LP未登録」はLP側の振り分け表にまだ無いrefで、押した人は全員「広告」として記録される（2026-09-01にLPのHTMLを直接見て確認）。</p>
     <div class="scroll"><table>
       <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
       
@@ -48,7 +55,7 @@
         </td>
         <td class="urlcell">
           <code id="u0benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=VO</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=VO">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=VO">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">Voicy お知らせリンク②</td>
@@ -60,7 +67,7 @@
         </td>
         <td class="urlcell">
           <code id="u1benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=YT</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=YT">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=YT">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">YouTube「お金の教室」概要欄</td>
@@ -72,7 +79,7 @@
         </td>
         <td class="urlcell">
           <code id="u2benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=X</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=X">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=X">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">X @1223michi</td>
@@ -84,7 +91,7 @@
         </td>
         <td class="urlcell">
           <code id="u3benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=IG</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=IG">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=IG">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">Instagram morikawa_fulfull</td>
@@ -96,10 +103,10 @@
         </td>
         <td class="urlcell">
           <code id="u4benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=SEO</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=SEO">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=SEO">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
-        <td class="where">fulfull.jp のブログ記事</td>
+        <td class="where">fulfull.jp のブログ記事（122本）</td>
       </tr>
       <tr>
         <td>
@@ -108,10 +115,70 @@
         </td>
         <td class="urlcell">
           <code id="u5benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=TOP</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=TOP">コピー</button>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=TOP">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">fulfull.jp トップページ</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">note用</div>
+          <div class="note">配ってはいるが、LPの振り分け表に NOTE が無い。noteからの人数は今のところ「広告」に混ざって数えられている</div>
+        </td>
+        <td class="urlcell">
+          <code id="u6benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=NOTE</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=NOTE">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">note 有料記事の末尾CTA（公開済み5本に適用済み）</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">棚ページ用</div>
+          <div class="note">同上。旧TinyURL(289t6ffp)は無効化されたため直URLに統一済み</div>
+        </td>
+        <td class="urlcell">
+          <code id="u7benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=MENU</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=MENU">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">fulfull-menu（fulfull でできること）の勉強会ボタン</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Voicy厳選30本ページ用</div>
+          <div class="note">同上</div>
+        </td>
+        <td class="urlcell">
+          <code id="u8benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=VSTEP</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=VSTEP">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">fulfull.jp/voicy-step/ の中間カード・末尾ボタン</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">赤ペン願書ラボ用</div>
+          <div class="note">同上。受験の悩み→教育費・新NISAへの橋</div>
+        </td>
+        <td class="urlcell">
+          <code id="u9benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=akapen</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=akapen">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">akapen-lab.com の「この先の一歩に」カード</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle読者用</div>
+          <div class="note">同上</div>
+        </td>
+        <td class="urlcell">
+          <code id="u10benkyokai">https://utage-system.com/p/xBWncXOH1VaH?ref=aozora_kindle</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH?ref=aozora_kindle">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">あおぞら父さんLINEの配信素材</td>
       </tr>
       <tr>
         <td>
@@ -119,8 +186,8 @@
           <div class="note">流入元が判別できないので、配布用には使わない</div>
         </td>
         <td class="urlcell">
-          <code id="u6benkyokai">https://utage-system.com/p/xBWncXOH1VaH</code>
-          <button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH">コピー</button>
+          <code id="u11benkyokai">https://utage-system.com/p/xBWncXOH1VaH</code>
+<button class="copy" data-url="https://utage-system.com/p/xBWncXOH1VaH">コピー</button>
         </td>
         <td><span class="badge" style="--c:#8a909c">使わない</span></td>
         <td class="where">―</td>
@@ -131,8 +198,8 @@
           <div class="note">外注作成でrefの振り分けが入っていない。全部が広告流入に落ちるため配布用には使わない</div>
         </td>
         <td class="urlcell">
-          <code id="u7benkyokai">https://fulfull.jp/lp/</code>
-          <button class="copy" data-url="https://fulfull.jp/lp/">コピー</button>
+          <code id="u12benkyokai">https://fulfull.jp/lp/</code>
+<button class="copy" data-url="https://fulfull.jp/lp/">コピー</button>
         </td>
         <td><span class="badge" style="--c:#8a909c">使わない</span></td>
         <td class="where">―</td>
@@ -140,22 +207,198 @@
     </table></div>
   </section>
   <section class="card">
-    <h2>販売中の商品</h2>
-    <p class="cap">note・Brainの商品ページ。SNS告知やCTAから直接リンクする。</p>
+    <h2>ユメカネサロン 参加ページ（流入元べつ）</h2>
+    <p class="cap">どれを開いても同じ参加ページで、LINEオープンチャットに繋がる。URLを分けているのは流入元の記録のため。短縮URLは使わない（2026-08-20に全廃）。</p>
     <div class="scroll"><table>
       <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
       
+      <tr>
+        <td>
+          <div class="name">参加ページ（ref無し・共有用）</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u0salon">https://mm738966m-boop.github.io/yumekane-salon/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">OGP設定済み。LINEやSNSに貼るとプレビューが出る</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Voicy用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u1salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=VO</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=VO">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">説明欄＋リンク欄（勉強会リンクは2番目に残す）</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">note用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u2salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=NOTE</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=NOTE">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">noteプロフィール</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Threads用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u3salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=TH</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=TH">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Threadsプロフィール</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">X用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u4salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=X</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=X">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Xプロフィール</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">TikTok用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u5salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=TT</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=TT">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">TikTokプロフィール</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">YouTube用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u6salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=YT</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=YT">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">概要欄の1番上（勉強会リンクは下に残す）</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Instagram用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u7salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=IG</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=IG">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">リンク欄の2番目（勉強会リンクは1番のまま）</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle特典LP用</div>
+          <div class="note">設置済みを確認</div>
+        </td>
+        <td class="urlcell">
+          <code id="u8salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=KD</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=KD">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">あおぞら父さん 3大読者特典ページ</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">勉強会フォロー用</div>
+          <div class="note">勉強会CTAと同時には出さない</div>
+        </td>
+        <td class="urlcell">
+          <code id="u9salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=SEM</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=SEM">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">勉強会の参加後フォロー</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">既存客への一斉案内用</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u10salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=CS</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=CS">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">保険のお客様・過去の参加者・スクール生への案内文</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">紹介（口コミ）用</div>
+          <div class="note">サロン参加者が友だちに送るときのURL</div>
+        </td>
+        <td class="urlcell">
+          <code id="u11salon">https://mm738966m-boop.github.io/yumekane-salon/?ref=REF</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/yumekane-salon/?ref=REF">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">招待キットの文面</td>
+      </tr>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>販売中の商品</h2>
+    <p class="cap">note・Brain・Kindleの商品ページ。SNS告知やCTAから直接リンクする。</p>
+    <div class="scroll"><table>
+      <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
+      
+      <tr>
+        <td>
+          <div class="name">note｜お金の教材一覧（カタログ＝棚）</div>
+          <div class="note">教材が増えたらこの記事に追記。URLは変えない</div>
+        </td>
+        <td class="urlcell">
+          <code id="u0products">https://note.com/yumekane/n/nb254ed64ff09</code>
+<button class="copy" data-url="https://note.com/yumekane/n/nb254ed64ff09">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">note自動記事の末尾CTA／プロフィール固定／fulfull-menu</td>
+      </tr>
       <tr>
         <td>
           <div class="name">note｜新NISA、結局何を買う？</div>
           <div class="note">¥980・2026-08-11公開</div>
         </td>
         <td class="urlcell">
-          <code id="u0products">https://note.com/yumekane/n/n474f96f62144</code>
-          <button class="copy" data-url="https://note.com/yumekane/n/n474f96f62144">コピー</button>
+          <code id="u1products">https://note.com/yumekane/n/n474f96f62144</code>
+<button class="copy" data-url="https://note.com/yumekane/n/n474f96f62144">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">Voicy お知らせリンク③／SNS告知</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">noteマガジン｜家族とお金のリアル 全5話＋特典15点</div>
+          <div class="note">¥500・2026-08-21開設。5本収録に到達したので¥980への値上げを提案中（森川さん承認待ち）</div>
+        </td>
+        <td class="urlcell">
+          <code id="u2products">https://note.com/yumekane/m/m3f9dc87df4fb</code>
+<button class="copy" data-url="https://note.com/yumekane/m/m3f9dc87df4fb">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">note プロフィール／各記事から</td>
       </tr>
       <tr>
         <td>
@@ -163,11 +406,467 @@
           <div class="note">¥1,980・紹介料50%・2026-08-12公開</div>
         </td>
         <td class="urlcell">
-          <code id="u1products">https://brain-market.com/u/fulfull1223/a/bwAjNwYjMgoTZsNWa0JXY</code>
-          <button class="copy" data-url="https://brain-market.com/u/fulfull1223/a/bwAjNwYjMgoTZsNWa0JXY">コピー</button>
+          <code id="u3products">https://brain-market.com/u/fulfull1223/a/bwAjNwYjMgoTZsNWa0JXY</code>
+<button class="copy" data-url="https://brain-market.com/u/fulfull1223/a/bwAjNwYjMgoTZsNWa0JXY">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">紹介依頼／SNS告知</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Brain｜図解メーカー</div>
+          <div class="note">¥1,980（発売記念・先着50部）・2026-08-18公開。🚨51部目から¥2,980へ値上げする約束</div>
+        </td>
+        <td class="urlcell">
+          <code id="u4products">https://brain-market.com/u/fulfull1223/a/b3YDNxYjMgoTZsNWa0JXY</code>
+<button class="copy" data-url="https://brain-market.com/u/fulfull1223/a/b3YDNxYjMgoTZsNWa0JXY">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Threads週次自動告知／SNS告知</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Brain｜売り込まない新規集客の教科書（金融AIカレッジ Phase 0）</div>
+          <div class="note">¥4,980・紹介料30%・2026-08-20公開。合格ライン=30日で20本＋購入者の声5件</div>
+        </td>
+        <td class="urlcell">
+          <code id="u5products">https://brain-market.com/u/fulfull1223/a/bwUDMyYjMgoTZsNWa0JXY</code>
+<button class="copy" data-url="https://brain-market.com/u/fulfull1223/a/bwUDMyYjMgoTZsNWa0JXY">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">SNS告知／同業者への案内</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Brain｜赤ペン願書ラボ 有料版</div>
+          <div class="note">¥1,980・紹介料50%。Brainアカウントは fulfull 側（1223ではない）</div>
+        </td>
+        <td class="urlcell">
+          <code id="u6products">https://brain-market.com/u/fulfull/a/b3UTMzYjMgoTZsNWa0JXY</code>
+<button class="copy" data-url="https://brain-market.com/u/fulfull/a/b3UTMzYjMgoTZsNWa0JXY">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">アフィリ打診文／akapen-lab.com</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Brain｜赤ペンAI添削キット（先生向け）</div>
+          <div class="note">¥4,980・紹介料50%・2026-08-29公開。重複記事(b1MjM)は削除済み、これが正</div>
+        </td>
+        <td class="urlcell">
+          <code id="u7products">https://brain-market.com/u/fulfull/a/b3kDNzYjMgoTZsNWa0JXY</code>
+<button class="copy" data-url="https://brain-market.com/u/fulfull/a/b3kDNzYjMgoTZsNWa0JXY">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">アフィリ打診文の末尾</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle｜子どもにお金の話をしよう（電子）</div>
+          <div class="note">¥500（KU対象）・144ページ。2026-08-31に¥99から改定</div>
+        </td>
+        <td class="urlcell">
+          <code id="u8products">https://www.amazon.co.jp/dp/B0HFQL7VFZ</code>
+<button class="copy" data-url="https://www.amazon.co.jp/dp/B0HFQL7VFZ">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">告知・LP</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle｜同（紙・ペーパーバック）</div>
+          <div class="note">🚨読者が払うのは¥1,518（税込）。KDPの¥1,380は本体価格なので使わない。A5判90ページ・2026-09-01発売</div>
+        </td>
+        <td class="urlcell">
+          <code id="u9products">https://www.amazon.co.jp/dp/B0HH8ZDKQ9</code>
+<button class="copy" data-url="https://www.amazon.co.jp/dp/B0HH8ZDKQ9">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">告知・LP</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle｜電子（アソシエイト版）</div>
+          <div class="note">タグ fulfull03-22。貼るページには「Amazonのアソシエイトとして、適格販売により収入を得ています。」の表示が必須</div>
+        </td>
+        <td class="urlcell">
+          <code id="u10products">https://amzn.to/4gNc1W3</code>
+<button class="copy" data-url="https://amzn.to/4gNc1W3">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">ブックLPから</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Kindle｜紙（アソシエイト版）</div>
+          <div class="note">同上</div>
+        </td>
+        <td class="urlcell">
+          <code id="u11products">https://amzn.to/3SBf3EQ</code>
+<button class="copy" data-url="https://amzn.to/3SBf3EQ">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">ブックLPから</td>
+      </tr>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>note 有料記事（マガジン「家族とお金のリアル」収録）</h2>
+    <p class="cap">バズったThreads投稿から毎週1本ずつ自動で作っている記事。公開したら必ずマガジンにも追加する。末尾CTAは勉強会LP（ref=NOTE）。</p>
+    <div class="scroll"><table>
+      <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
+      
+      <tr>
+        <td>
+          <div class="name">10年介護した姉と、何もしなかった弟</div>
+          <div class="note">2026-08-18公開・初日に購入発生</div>
+        </td>
+        <td class="urlcell">
+          <code id="u0noteengine">https://note.com/yumekane/n/n267b80337c31</code>
+<button class="copy" data-url="https://note.com/yumekane/n/n267b80337c31">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">マガジン1本目</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">老後のお金の話、したことある夫婦・ない夫婦</div>
+          <div class="note">2026-08-20公開</div>
+        </td>
+        <td class="urlcell">
+          <code id="u1noteengine">https://note.com/yumekane/n/nf28dfc186212</code>
+<button class="copy" data-url="https://note.com/yumekane/n/nf28dfc186212">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">マガジン2本目</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">姉は奨学金400万、妹は学費800万を親が全額負担</div>
+          <div class="note">2026-08-21公開</div>
+        </td>
+        <td class="urlcell">
+          <code id="u2noteengine">https://note.com/yumekane/n/n9b4beb1e97b9</code>
+<button class="copy" data-url="https://note.com/yumekane/n/n9b4beb1e97b9">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">マガジン3本目</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">15年間、毎月3万円を送り続けた娘</div>
+          <div class="note">2026-08-23公開</div>
+        </td>
+        <td class="urlcell">
+          <code id="u3noteengine">https://note.com/yumekane/n/ne88e1e7a4582</code>
+<button class="copy" data-url="https://note.com/yumekane/n/ne88e1e7a4582">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">マガジン4本目</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">退職金2,300万円で住宅ローンを一括返済した夫婦</div>
+          <div class="note">2026-08-31公開</div>
+        </td>
+        <td class="urlcell">
+          <code id="u4noteengine">https://note.com/yumekane/n/n1e0e37f16f5b</code>
+<button class="copy" data-url="https://note.com/yumekane/n/n1e0e37f16f5b">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">マガジン5本目</td>
+      </tr>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>サイト・LP・ツール</h2>
+    <p class="cap">人に送るページ。すべて2026-09-01に開いて表示を確認済み。</p>
+    <div class="scroll"><table>
+      <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
+      
+      <tr>
+        <td>
+          <div class="name">fulfull コーポレートサイト</div>
+          <div class="note">SEO記事122本・週3本自動公開</div>
+        </td>
+        <td class="urlcell">
+          <code id="u0pages">https://fulfull.jp/</code>
+<button class="copy" data-url="https://fulfull.jp/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Voicy「ふるふるラジオ」まずはこの30本から</div>
+          <div class="note">Voicy＝「ふるふるラジオ」／スクール＝「ふるふるの森」で呼称統一</div>
+        </td>
+        <td class="urlcell">
+          <code id="u1pages">https://fulfull.jp/voicy-step/</code>
+<button class="copy" data-url="https://fulfull.jp/voicy-step/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Voicy新規リスナーの受け皿</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">fulfull でできること（棚ページ）</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u2pages">https://mm738966m-boop.github.io/fulfull-menu/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/fulfull-menu/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">問い合わせ前に見てもらう一覧</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">ユメカネサロン 公式サイト（学びコンテンツ）</div>
+          <div class="note">イベント予定は /event</div>
+        </td>
+        <td class="urlcell">
+          <code id="u3pages">https://yumekane-salon.com/</code>
+<button class="copy" data-url="https://yumekane-salon.com/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">参加ページから</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">あおぞら父さん ブックLP</div>
+          <div class="note">2026-09-01更新。Kindle¥500／紙¥1,518の2択・試し読み・読者特典つき</div>
+        </td>
+        <td class="urlcell">
+          <code id="u4pages">https://mm738966m-boop.github.io/aozora-line/book/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/aozora-line/book/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Kindle本の紹介・告知から</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">あおぞら父さん 3大読者特典の受け取り</div>
+          <div class="note">あおぞら父さんLINEとサロン(ref=KD)へ繋がる</div>
+        </td>
+        <td class="urlcell">
+          <code id="u5pages">https://mm738966m-boop.github.io/aozora-line/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/aozora-line/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">本の巻末から</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">赤ペン願書ラボ（願書版・無料チェッカー）</div>
+          <div class="note">旧 github.io のURLは使わない</div>
+        </td>
+        <td class="urlcell">
+          <code id="u6pages">https://akapen-lab.com/</code>
+<button class="copy" data-url="https://akapen-lab.com/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Xプロフィール固定／アフィリ打診文</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">赤ペン願書ラボ（志望理由書・AO版）</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u7pages">https://akapen-lab.com/ao.html</code>
+<button class="copy" data-url="https://akapen-lab.com/ao.html">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">赤ペン願書ラボ 入口ページ（どちらを使うか案内）</div>
+          <div class="note">⏳先生キット(b3kDN)の第5章にこのURLを追記する作業が残っている</div>
+        </td>
+        <td class="urlcell">
+          <code id="u8pages">https://akapen-lab.com/start.html</code>
+<button class="copy" data-url="https://akapen-lab.com/start.html">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">先生が生徒に配るとき用</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">合同会社AGILE コーポレートサイト</div>
+          <div class="note">ソースはGitHub mm738966m-boop/agile-os のみ</div>
+        </td>
+        <td class="urlcell">
+          <code id="u9pages">https://agile-os.jp/</code>
+<button class="copy" data-url="https://agile-os.jp/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">名刺QRの飛び先</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">金融AIカレッジ メンバーポータル</div>
+          <div class="note">vibely。会員データはCSVで出せる</div>
+        </td>
+        <td class="urlcell">
+          <code id="u10pages">https://kinyu-ai-college.vibely.site/</code>
+<button class="copy" data-url="https://kinyu-ai-college.vibely.site/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">受講生向け</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">パーソナルCFO LP</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u11pages">https://mm738966m-boop.github.io/okane-cfo-lp/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/okane-cfo-lp/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">パーソナルCFO 事前シート</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u12pages">https://mm738966m-boop.github.io/pcfo-sheet/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/pcfo-sheet/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">面談前にお客様へ送る</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">わたしの新NISA、決める日（1対1・全2回100分）</div>
+          <div class="note">特商法表記は /tokusho.html</div>
+        </td>
+        <td class="urlcell">
+          <code id="u13pages">https://mm738966m-boop.github.io/nisa-kimeruhi/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/nisa-kimeruhi/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">Voicyの差し込みチャプターから</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">1分でわかる 家計タイプ診断</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u14pages">https://mm738966m-boop.github.io/kakei-type-shindan/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/kakei-type-shindan/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">ふるふるハイブリッドスクール 退会届</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u15pages">https://mm738966m-boop.github.io/taikai/</code>
+<button class="copy" data-url="https://mm738966m-boop.github.io/taikai/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">退会希望の方へ個別に送る</td>
+      </tr>
+    </table></div>
+  </section>
+  <section class="card">
+    <h2>発信チャンネル</h2>
+    <p class="cap">プロフィール欄の貼り替えや、人に「ここで発信しています」と伝えるときの本体URL。</p>
+    <div class="scroll"><table>
+      <tr><th>用途</th><th>URL</th><th>状態</th><th>設置場所</th></tr>
+      
+      <tr>
+        <td>
+          <div class="name">Voicy｜ふるふるラジオ</div>
+          <div class="note">チャンネル名は「もりかわ｜投資の先生」</div>
+        </td>
+        <td class="urlcell">
+          <code id="u0sns">https://voicy.jp/channel/2110</code>
+<button class="copy" data-url="https://voicy.jp/channel/2110">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">note｜ユメカネ</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u1sns">https://note.com/yumekane</code>
+<button class="copy" data-url="https://note.com/yumekane">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">note｜メンバーシップ</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u2sns">https://note.com/yumekane/membership</code>
+<button class="copy" data-url="https://note.com/yumekane/membership">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Threads｜morikawa_fulfull</div>
+          <div class="note">自動投稿ボット稼働中</div>
+        </td>
+        <td class="urlcell">
+          <code id="u3sns">https://www.threads.com/@morikawa_fulfull</code>
+<button class="copy" data-url="https://www.threads.com/@morikawa_fulfull">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">Instagram｜morikawa_fulfull</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u4sns">https://www.instagram.com/morikawa_fulfull/</code>
+<button class="copy" data-url="https://www.instagram.com/morikawa_fulfull/">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">X｜@1223michi</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u5sns">https://x.com/1223michi</code>
+<button class="copy" data-url="https://x.com/1223michi">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">YouTube｜@morichi1223</div>
+          
+        </td>
+        <td class="urlcell">
+          <code id="u6sns">https://www.youtube.com/@morichi1223</code>
+<button class="copy" data-url="https://www.youtube.com/@morichi1223">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">―</td>
       </tr>
     </table></div>
   </section>
@@ -184,7 +883,7 @@
         </td>
         <td class="urlcell">
           <code id="u0line">https://lin.ee/5scBqPt5</code>
-          <button class="copy" data-url="https://lin.ee/5scBqPt5">コピー</button>
+<button class="copy" data-url="https://lin.ee/5scBqPt5">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">note記事の追伸CTA</td>
@@ -196,10 +895,10 @@
         </td>
         <td class="urlcell">
           <code id="u1line">https://line.me/ti/g2/sn8DRIkFRU2tPxzmUQ0ZHq5kn9RtTGrYlJhFfw</code>
-          <button class="copy" data-url="https://line.me/ti/g2/sn8DRIkFRU2tPxzmUQ0ZHq5kn9RtTGrYlJhFfw">コピー</button>
+<button class="copy" data-url="https://line.me/ti/g2/sn8DRIkFRU2tPxzmUQ0ZHq5kn9RtTGrYlJhFfw">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
-        <td class="where">Brain教材の巻末</td>
+        <td class="where">参加ページのボタン／Brain教材の巻末</td>
       </tr>
       <tr>
         <td>
@@ -208,10 +907,34 @@
         </td>
         <td class="urlcell">
           <code id="u2line">https://line.me/ti/g2/5elSx3UL33h45gLXpO5VEY1R-aQLeVe6q9-ccQ</code>
-          <button class="copy" data-url="https://line.me/ti/g2/5elSx3UL33h45gLXpO5VEY1R-aQLeVe6q9-ccQ">コピー</button>
+<button class="copy" data-url="https://line.me/ti/g2/5elSx3UL33h45gLXpO5VEY1R-aQLeVe6q9-ccQ">コピー</button>
         </td>
         <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
         <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">あおぞら父さん LINE</div>
+          <div class="note">友だち2名（本人含む）。Kindle読者の受け皿</div>
+        </td>
+        <td class="urlcell">
+          <code id="u3line">https://line.me/R/ti/p/@958oljwk</code>
+<button class="copy" data-url="https://line.me/R/ti/p/@958oljwk">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#2E6FB7">使用中</span></td>
+        <td class="where">3大読者特典ページのボタン</td>
+      </tr>
+      <tr>
+        <td>
+          <div class="name">金融AIカレッジ LINE</div>
+          <div class="note">⏳森川さん待ち。LINE公式アカウントの新規作成はご本人のLINEログインが必要。作成後の接続・配信設定はこちらで進めます</div>
+        </td>
+        <td class="urlcell">
+          <code id="u4line">（未開設）</code>
+
+        </td>
+        <td><span class="badge" style="--c:#C0392B">LP未登録</span></td>
+        <td class="where">診断・広告・ステップ配信の合流点</td>
       </tr>
     </table></div>
   </section>
@@ -223,12 +946,24 @@
       
       <tr>
         <td>
+          <div class="name">既定（refが無い／表に無いときの飛び先）</div>
+          <div class="note">LPのボタンに最初から入っているID。上の「LP未登録」のrefは全部ここに落ちる</div>
+        </td>
+        <td class="urlcell">
+          <code id="u0direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=Us2bWvI6KlNU</code>
+<button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=Us2bWvI6KlNU">コピー</button>
+        </td>
+        <td><span class="badge" style="--c:#8a909c">使わない</span></td>
+        <td class="where">―</td>
+      </tr>
+      <tr>
+        <td>
           <div class="name">Voicy流入</div>
           
         </td>
         <td class="urlcell">
-          <code id="u0direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=b2MBSdQnemLO</code>
-          <button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=b2MBSdQnemLO">コピー</button>
+          <code id="u1direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=b2MBSdQnemLO</code>
+<button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=b2MBSdQnemLO">コピー</button>
         </td>
         <td><span class="badge" style="--c:#8a909c">使わない</span></td>
         <td class="where">―</td>
@@ -236,14 +971,14 @@
       <tr>
         <td>
           <div class="name">note流入</div>
-          <div class="note">記事の末尾は既にLPを読んだ人ではないため例外的に使用</div>
+          <div class="note">記事の末尾は既にLPを読んだ人ではないため例外的に使っていた。現在の末尾CTAはLP（ref=NOTE）に統一済み</div>
         </td>
         <td class="urlcell">
-          <code id="u1direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=H7x9RFYJOEGF</code>
-          <button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=H7x9RFYJOEGF">コピー</button>
+          <code id="u2direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=H7x9RFYJOEGF</code>
+<button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=H7x9RFYJOEGF">コピー</button>
         </td>
         <td><span class="badge" style="--c:#8a909c">使わない</span></td>
-        <td class="where">note記事の末尾CTAで使用中</td>
+        <td class="where">―</td>
       </tr>
       <tr>
         <td>
@@ -251,8 +986,8 @@
           
         </td>
         <td class="urlcell">
-          <code id="u2direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=rk0uO8hsXjVX</code>
-          <button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=rk0uO8hsXjVX">コピー</button>
+          <code id="u3direct">https://utage-system.com/line/open/X4Z2lketpu30?mtid=rk0uO8hsXjVX</code>
+<button class="copy" data-url="https://utage-system.com/line/open/X4Z2lketpu30?mtid=rk0uO8hsXjVX">コピー</button>
         </td>
         <td><span class="badge" style="--c:#8a909c">使わない</span></td>
         <td class="where">Brain教材の末尾CTAで使用中</td>
