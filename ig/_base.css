@@ -1,0 +1,22 @@
+:root{--teal:#0E7C86;--deep:#0A5A62;--ink:#1C3236;--ink2:#4A6468;--soft:#EEF6F7;--line:#D5E4E6;--gold:#A87A1F;--goldfill:#D9A441;--goldbg:#FBF4E3;--bg:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;font-size:18px;font-weight:500;line-height:1.9;padding:0 16px 72px}
+.wrap{max-width:760px;margin:0 auto}h1,h2{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Noto Sans JP",sans-serif;font-weight:900;line-height:1.35;color:var(--deep);margin:0}
+h1{font-size:clamp(26px,5.5vw,38px)}h2{font-size:22px;margin-top:40px;padding-top:18px;border-top:3px solid var(--teal)}
+.eyebrow{font-size:14px;letter-spacing:.14em;color:var(--teal);font-weight:700;margin-top:36px}
+p{margin:12px 0}.note{font-size:15px;color:var(--ink2)}
+.box{background:var(--soft);border-radius:16px;padding:18px 20px;margin:18px 0}
+.gold{background:var(--goldbg);border-left:6px solid var(--goldfill);border-radius:12px;padding:14px 20px;margin:18px 0}
+.q{border:2px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0;background:#fff}
+.q b{display:block;color:var(--deep);font-size:19px;margin-bottom:6px}
+.write{min-height:64px;border-bottom:2px dashed var(--line);margin-top:8px}
+.write.tall{min-height:110px}
+.cta{display:block;text-align:center;background:var(--teal);color:#fff;text-decoration:none;font-weight:900;font-size:19px;border-radius:999px;padding:16px 22px;margin:28px auto 8px;max-width:420px}
+.cta.sub{background:#fff;color:var(--teal);border:3px solid var(--teal)}
+.sig{font-size:15px;color:var(--ink2);text-align:center;margin-top:28px}
+.flow{display:grid;gap:10px;margin:16px 0}
+.step{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 16px}
+.step .n{width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;display:grid;place-items:center}
+.step b{display:block;color:var(--deep)}.step small{color:var(--ink2);font-size:15px}
+.tag{display:inline-block;background:var(--goldbg);color:var(--gold);border-radius:999px;padding:1px 10px;font-size:13.5px;font-weight:700;margin-left:6px}
+ul{padding-left:1.3em;margin:8px 0}li{margin:6px 0}
+@media print{.cta,.sig{display:none}body{padding:0}}
