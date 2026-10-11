@@ -1,23 +1,106 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>家族で一度だけ話すための紙｜書くだけ設計ノート（1枚版）</title>
-<meta property="og:title" content="家族で一度だけ話すための紙（書くだけ設計ノート 1枚版）"><meta property="og:description" content="お金の揉めごとの9割は「話さなかったこと」で起きます。家族で一度だけ話すための、問いが5つの紙。お金のプロ 森川満章"><meta property="og:type" content="article">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css"></head>
+<title>家族に「どうしたい？」と聞ける文章が5分でできる紙｜森川満章</title>
+<meta property="og:title" content="家族に「どうしたい？」と聞ける文章が、5分でできる紙"><meta property="og:description" content="タップで5つ答えると、家族に送る一言ができあがります。お金の揉めごとの9割は「話さなかったこと」で起きます。お金のプロ 森川満章"><meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css">
+<style>
+.hero{display:grid;grid-template-columns:1fr 120px;gap:14px;align-items:end;padding-top:28px}.hero img{width:120px}
+.sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
+.pill{display:inline-block;background:var(--soft);color:var(--deep);border-radius:999px;padding:2px 12px;font-size:14px;font-weight:700;margin:4px 6px 0 0}
+.sample{background:var(--card,#fff);border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:14px 0;position:relative}
+.sample .lab{position:absolute;top:-12px;left:14px;background:var(--goldfill);color:#1C3236;font-size:13.5px;font-weight:900;border-radius:999px;padding:1px 10px}
+.sample p{margin:6px 0;font-size:17px}
+.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0}
+.qcard.done{border-color:var(--teal)}
+.qn{font-size:13.5px;color:var(--teal);font-weight:900;letter-spacing:.1em}
+.qt{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:900;font-size:20px;color:var(--deep);margin:4px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.free{width:100%;margin-top:10px;border:2px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.prog{display:flex;gap:6px;margin:14px 0 4px}.prog i{flex:1;height:8px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--teal)}
+.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal)}
+.result h2{border:0;margin:0;padding:0;font-size:21px}
+.msg{background:#fff;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:17px;line-height:1.8;white-space:pre-wrap;border:2px dashed var(--line)}
+.btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;font:inherit;font-size:16px;font-weight:900;cursor:pointer;background:var(--teal);color:#fff}
+.btn.ghost{background:#fff;color:var(--teal);border:2px solid var(--teal)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}.why div{background:var(--soft);border-radius:12px;padding:12px;text-align:center;font-weight:700;font-size:15px;color:var(--deep)}
+@media(max-width:640px){.hero{grid-template-columns:1fr 90px}.hero img{width:90px}.why{grid-template-columns:1fr}}
+</style></head>
 <body><div class="wrap">
-<div class="eyebrow">コメント「設計ノート」でお届けした紙です</div>
-<h1>家族で一度だけ話すための紙</h1>
-<p>森川です。受け取っていただき、ありがとうございます。<br>お金の揉めごとの9割は、金額ではなく「話さなかったこと」で起きます。<br>この紙は、話し合いの前に<b>自分の頭を整えるため</b>のものです。<br>スマホのメモに書き写しても、画面を見ながら書いても大丈夫です。</p>
-<div class="gold"><p style="margin:0"><b>使い方</b>　①まず自分ひとりで5つの問いに書く → ②家族に「どうしたい？」とだけ聞く → ③相手の答えを、この紙の下に書き足す。<br>決めなくていいです。<b>一度、言葉にする</b>のがゴールです。</p></div>
+<div class="hero"><div>
+<div class="eyebrow" style="margin-top:0">コメント「設計ノート」の紙</div>
+<h1>家族に「どうしたい？」と聞ける文章が、5分でできます</h1>
+<p class="sub">5つ、タップで答えるだけ。<br>最後に<b>家族に送る一言</b>ができあがります。入力した内容はこの端末の中だけに残り、どこにも送られません。</p>
+</div><img src="../img/mascot_invite.webp" alt=""></div>
 
-<div class="q"><b>問い1　誰の、どのお金の話をしたいですか？</b><span class="note">例：母の家と預金／夫婦の生活費の分け方／子どもの教育費</span><div class="write"></div></div>
-<div class="q"><b>問い2　いま「決まっていること」と「決まっていないこと」は何ですか？</b><span class="note">決まっていないことが多くて普通です。書き出すだけで半分終わります</span><div class="write tall"></div></div>
-<div class="q"><b>問い3　そのお金を、3つの箱に分けるとしたら？</b><span class="note">A いま使う（1年以内）／B 近い将来（5年以内に来る出費）／C ずっと先（老後・相続）</span><div class="write tall"></div></div>
-<div class="q"><b>問い4　本当は、どうしたいですか？</b><span class="note">金額より先に「気持ち」。「せめて一言欲しかった」を、先に言葉にしておく欄です</span><div class="write tall"></div></div>
-<div class="q"><b>問い5　誰に、いつ、「どうしたい？」と聞きますか？</b><span class="note">相手の名前と、日付を1つだけ。今週のどこかに</span><div class="write"></div></div>
+<div class="sample"><span class="lab">できあがりの例</span>
+<p>「お母さんの家と預金のこと、いま決まっていないのは『誰が住むか』と『介護のお金』だと思ってる。<br>金額の話より先に、お母さんが本当はどうしたいかを一度聞きたい。<br>今度の日曜、電話で5分だけいい？」</p>
+<p class="note" style="margin:8px 0 0">↑ こういう文章が、あなたの答えから自動で組み上がります。そのままLINEで送れます。</p></div>
 
-<h2>話したあとに</h2>
-<div class="box"><p style="margin:0">相手の答えを、ここに書き足してください。<br>食い違っていても大丈夫です。食い違いが見えた時点で、揉めごとの半分は消えています。<br>「数字でどう分けるか」「どの順番で使うか」は、次の段階の話です。</p><div class="write tall" style="background:#fff;border-radius:10px;border:2px dashed var(--line)"></div></div>
+<div class="why"><div>揉めごとの9割は<br>「話さなかったこと」</div><div>だから先に<br>自分の頭を整える</div><div>決めなくていい<br>一度、言葉にする</div></div>
 
-<p>ここから先の「順番」と「分け方」は、無料のお金の勉強会（オンライン・90分）で、紙を見ながら一緒に整理しています。<br>家族で参加しても大丈夫です。</p>
+<div class="prog" id="prog"><i></i><i></i><i></i><i></i><i></i></div>
+
+<div class="qcard" id="q1"><div class="qn">1 / 5</div><div class="qt">誰の、どのお金の話ですか？</div>
+<div class="chips" data-q="who" data-single="1"><button class="chip">親の家と預金</button><button class="chip">夫婦の生活費</button><button class="chip">子どもの教育費</button><button class="chip">自分たちの老後</button><button class="chip">相続・遺産</button><button class="chip">実家の処分</button></div>
+<input class="free" id="who_free" placeholder="その他（例：弟に貸したお金）"></div>
+
+<div class="qcard" id="q2"><div class="qn">2 / 5</div><div class="qt">いま「決まっていないこと」はどれですか？（いくつでも）</div>
+<div class="chips" data-q="undecided"><button class="chip">誰が住むか</button><button class="chip">介護のお金</button><button class="chip">毎月いくら出すか</button><button class="chip">いつ使うか</button><button class="chip">誰が管理するか</button><button class="chip">分け方</button><button class="chip">そもそも話していない</button></div></div>
+
+<div class="qcard" id="q3"><div class="qn">3 / 5</div><div class="qt">そのお金で、いちばん心配なのはどの箱ですか？</div>
+<div class="chips" data-q="box" data-single="1"><button class="chip">いま使うお金（1年以内）</button><button class="chip">近い将来の出費（5年以内）</button><button class="chip">ずっと先（老後・相続）</button></div>
+<p class="note" style="margin:10px 0 0">お金は「いま・近い将来・ずっと先」の3つの箱に分けると、話が早くなります。</p></div>
+
+<div class="qcard" id="q4"><div class="qn">4 / 5</div><div class="qt">本当は、どうしたいですか？</div>
+<div class="chips" data-q="feel" data-single="1"><button class="chip">揉めたくない</button><button class="chip">先に気持ちを聞きたい</button><button class="chip">数字をはっきりさせたい</button><button class="chip">自分だけで抱えたくない</button><button class="chip">公平にしたい</button></div>
+<input class="free" id="feel_free" placeholder="ひとこと足すなら（例：せめて一言欲しい）"></div>
+
+<div class="qcard" id="q5"><div class="qn">5 / 5</div><div class="qt">誰に、いつ聞きますか？</div>
+<input class="free" id="to" placeholder="相手（例：お母さん／夫／姉）" style="margin-top:0">
+<div class="chips" data-q="when" data-single="1" style="margin-top:10px"><button class="chip">今日</button><button class="chip">今週中</button><button class="chip">今度の週末</button><button class="chip">来月</button></div>
+<div class="chips" data-q="how" data-single="1" style="margin-top:10px"><button class="chip">電話で5分</button><button class="chip">会ったときに</button><button class="chip">LINEで</button></div></div>
+
+<div class="result" id="result" hidden>
+<h2>できあがりました</h2>
+<p class="note">そのまま送っても、言い回しを直しても大丈夫です。決めるための文章ではなく、聞くための文章です。</p>
+<div class="msg" id="msg"></div>
+<div class="row"><button class="btn" id="copy" type="button">文章をコピー</button><button class="btn ghost" id="reset" type="button">書き直す</button><span class="note" id="copied"></span></div>
+<p style="margin-top:16px">聞いたあとの「分け方」と「使う順番」は、無料のお金の勉強会（オンライン・90分）で、この紙を見ながら一緒に整理しています。家族で参加しても大丈夫です。</p>
 <a class="cta" href="https://utage-system.com/p/xBWncXOH1VaH?ref=IG_note&utm_source=instagram&utm_medium=dm&utm_campaign=sekkei_note">無料のお金の勉強会の日程を見る</a>
-<p class="sig">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull　質問はDMに返信してください。僕が読みます。</p>
-</div></body></html>
+</div>
+
+<p class="sig"><img src="../img/mascot_base.webp" alt="" style="width:80px;display:block;margin:0 auto 8px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>書いてみて迷ったところは、InstagramのDMに送ってください。僕が読みます。</p>
+</div>
+<script>
+const S={who:[],undecided:[],box:[],feel:[],when:[],how:[]};
+try{Object.assign(S,JSON.parse(localStorage.getItem('note')||'{}'))}catch(e){}
+document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q,single=!!g.dataset.single;g.querySelectorAll('.chip').forEach(b=>{if(S[q].includes(b.textContent))b.classList.add('on');b.onclick=()=>{if(single){g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));S[q]=[b.textContent];b.classList.add('on');}else{b.classList.toggle('on');S[q]=[...g.querySelectorAll('.chip.on')].map(x=>x.textContent);}update();};});});
+['who_free','feel_free','to'].forEach(id=>{const el=document.getElementById(id);el.value=S[id]||'';el.oninput=()=>{S[id]=el.value;update();};});
+function val(q,free){const v=S[q][0]||'';const f=(S[free]||'').trim();return f||v;}
+function update(){
+ try{localStorage.setItem('note',JSON.stringify(S))}catch(e){}
+ const done=[!!val('who','who_free'),S.undecided.length>0,S.box.length>0,!!val('feel','feel_free'),!!(S.to||'').trim()&&S.when.length>0];
+ document.querySelectorAll('#prog i').forEach((i,k)=>i.classList.toggle('on',done[k]));
+ done.forEach((d,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',d));
+ const r=document.getElementById('result'); if(done.every(Boolean)){r.hidden=false;document.getElementById('msg').textContent=build();}else{r.hidden=true;}
+}
+function build(){
+ const who=val('who','who_free'),to=(S.to||'').trim(),und=S.undecided.filter(x=>x!=='そもそも話していない'),talked=S.undecided.includes('そもそも話していない');
+ const box={ 'いま使うお金（1年以内）':'この1年で使うお金','近い将来の出費（5年以内）':'5年くらい先までに来る出費','ずっと先（老後・相続）':'ずっと先の、老後や相続のこと'}[S.box[0]]||'';
+ const feel={ '揉めたくない':'揉めたくないから、','先に気持ちを聞きたい':'金額の話より先に、','数字をはっきりさせたい':'一度、数字をはっきりさせたくて、','自分だけで抱えたくない':'自分だけで抱えたくないから、','公平にしたい':'あとで公平に決めたいから、'}[S.feel[0]]||'';
+ const ff=(S.feel_free||'').trim();
+ const how={ '電話で5分':'電話で5分だけ','会ったときに':'会ったときに少しだけ','LINEで':'LINEで少しだけ'}[S.how[0]]||'少しだけ';
+ let m=`${to}へ。\n${who}のこと、`;
+ m+= talked&&!und.length ? 'まだちゃんと話せていないなと思ってる。' : `いま決まっていないのは「${und.join('」と「')}」だと思ってる。`;
+ if(box) m+=`\nとくに気になっているのは、${box}。`;
+ m+=`\n${feel}${to}が本当はどうしたいかを、一度聞きたい。`;
+ if(ff) m+=`\n${ff}。`;
+ m+=`\n${S.when[0]||''}、${how}いい？\n決めなくていいから、気持ちだけ教えてほしい。`;
+ return m;
+}
+document.getElementById('copy').onclick=async()=>{const t=document.getElementById('msg').textContent;try{await navigator.clipboard.writeText(t);document.getElementById('copied').textContent='コピーしました';}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);document.getElementById('copied').textContent='長押しでコピーしてください';}};
+document.getElementById('reset').onclick=()=>{Object.keys(S).forEach(k=>S[k]=Array.isArray(S[k])?[]:'');try{localStorage.removeItem('note')}catch(e){}document.querySelectorAll('.chip').forEach(b=>b.classList.remove('on'));['who_free','feel_free','to'].forEach(id=>document.getElementById(id).value='');update();window.scrollTo({top:0,behavior:'smooth'});};
+update();
+</script></body></html>

@@ -1,28 +1,98 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AIが毎日お客様を連れてくる仕組み（全体像1枚）｜森川満章</title>
-<meta property="og:title" content="AIが毎日お客様を連れてくる仕組み（全体像1枚）"><meta property="og:description" content="お金のプロの小さな会社が、営業と事務をAIに渡している全体像。AIにやらせない3つのことも。森川満章"><meta property="og:type" content="article">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css"></head>
+<title>社員ゼロで、お客様の案内と事務をAIが毎日回している全体像｜森川満章</title>
+<meta property="og:title" content="社員ゼロの会社で、お客様の案内と事務をAIが毎日回している全体像"><meta property="og:description" content="お金のプロの小さな会社が、営業と事務をAIに渡している6段の仕組み。3問答えると、あなたの会社で最初に渡せる仕事が出ます。森川満章"><meta property="og:type" content="article">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css">
+<style>
+.hero{display:grid;grid-template-columns:1fr 120px;gap:14px;align-items:end;padding-top:28px}.hero img{width:120px}
+.sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--line);border-radius:16px;overflow:hidden;margin:18px 0}
+.lanes .h{padding:10px 12px;font-weight:900;text-align:center;font-size:15px}
+.lanes .h.ai{background:var(--teal);color:#fff}.lanes .h.hu{background:var(--goldbg);color:var(--gold)}
+.lanes .c{padding:12px 14px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.7}
+.lanes .c.ai{background:#F6FBFB}.lanes .c.hu{background:#FFFCF4}
+.lanes .c b{display:block;color:var(--deep);font-size:16px}
+.stepn{grid-column:1/3;background:var(--soft);padding:6px 14px;font-weight:900;color:var(--deep);font-size:14.5px;letter-spacing:.06em;border-top:2px solid var(--line)}
+.fact{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.fact div{background:var(--soft);border-radius:12px;padding:12px;text-align:center}.fact b{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:26px;color:var(--deep);line-height:1.2}.fact span{font-size:13.5px;color:var(--ink2);font-weight:700}
+.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0}.qcard.done{border-color:var(--teal)}
+.qn{font-size:13.5px;color:var(--teal);font-weight:900;letter-spacing:.1em}
+.qt{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:900;font-size:20px;color:var(--deep);margin:4px 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal)}
+.result h2{border:0;margin:0;padding:0;font-size:21px}
+.rbox{background:#fff;border-radius:12px;padding:14px 16px;margin:12px 0;border:2px dashed var(--line)}
+.rbox b{color:var(--deep)}
+@media(max-width:640px){.hero{grid-template-columns:1fr 90px}.hero img{width:90px}.fact{grid-template-columns:1fr 1fr 1fr}.fact b{font-size:20px}}
+</style></head>
 <body><div class="wrap">
-<div class="eyebrow">コメント「AI」でお届けした1枚です</div>
-<h1>AIが毎日お客様を連れてくる仕組み</h1>
-<p>森川です。受け取っていただき、ありがとうございます。<br>うちは社員ゼロの小さな会社です。<br>それでも毎日、投稿が出て、問い合わせに返事が届き、勉強会の案内が送られ、提案書の下書きが机に乗っています。<br>やっているのは「人がやる仕事」と「AIに渡す仕事」を分けただけです。全体はこの6段です。</p>
+<div class="hero"><div>
+<div class="eyebrow" style="margin-top:0">コメント「AI」の1枚</div>
+<h1>社員ゼロの会社で、お客様の案内と事務をAIが毎日回しています</h1>
+<p class="sub">やったのは「人がやる仕事」と「AIに渡す仕事」を分けただけ。<br>全体像を1枚にしました。最後に<b>3問答えると、あなたの会社で最初に渡せる仕事</b>が出ます。</p>
+</div><img src="../img/mascot_point.webp" alt=""></div>
 
-<div class="flow">
-<div class="step"><div class="n">1</div><div><b>入口：毎日の発信 <span class="tag">AIが下書き・人が決裁</span></b><small>Threads・Instagram・音声配信。伸びた投稿の型をAIが学んで翌週の案を出す。載せるかどうかは僕。</small></div></div>
-<div class="step"><div class="n">2</div><div><b>受付：合言葉にDMで返す <span class="tag">AIが自動</span></b><small>コメントに「勉強会」「AI」などの合言葉 → 7日以内の人にだけ資料をDM。こちらから勧誘DMは送らない。</small></div></div>
-<div class="step"><div class="n">3</div><div><b>案内：勉強会の申込・リマインド <span class="tag">AIが自動</span></b><small>申込→日程の確定→前日と当日朝のリマインド→キャンセル受付→カレンダー登録まで、人の手はゼロ。</small></div></div>
-<div class="step"><div class="n">4</div><div><b>準備：提案書と面談メモの下書き <span class="tag">AIが下書き</span></b><small>相談内容から下書きを作る。数字の最終確認と、お客様の名前を呼ぶのは僕。</small></div></div>
-<div class="step"><div class="n">5</div><div><b>事務：報告・記録・請求の型 <span class="tag">AIが自動</span></b><small>面談後の記録、週次の数字、朝の予定の読み上げ。毎朝7時に届く。</small></div></div>
-<div class="step"><div class="n">6</div><div><b>学習：毎週、数字を見て直す <span class="tag">AIが集計・人が判断</span></b><small>届いた数・保存・問い合わせを週1で集計。何を増やすかを決めるのは人。</small></div></div>
+<div class="fact"><div><b>1日2本</b><span>投稿が自動で出る</span></div><div><b>人の手ゼロ</b><span>勉強会の申込〜前日リマインド</span></div><div><b>朝7時</b><span>その日の予定と数字が届く</span></div></div>
+<p class="note">数字は実際に動いている仕組みのものだけを書いています。</p>
+
+<h2>全体像：左がAI、右が人</h2>
+<div class="lanes">
+<div class="h ai">AIがやる</div><div class="h hu">人（僕）がやる</div>
+<div class="stepn">1　入口：毎日の発信</div>
+<div class="c ai"><b>伸びた投稿の型を学んで、翌週の案を書く</b>Threads・Instagram・音声配信。1日2本は自動で出る</div><div class="c hu"><b>載せるかどうかを決める</b>実話は自分の言葉に直す</div>
+<div class="stepn">2　受付：合言葉にDMで返す</div>
+<div class="c ai"><b>コメントの合言葉に資料をDM</b>7日以内の人にだけ。1日4回巡回</div><div class="c hu"><b>こちらからの勧誘DMはしない</b>返事が来たら人が読む</div>
+<div class="stepn">3　案内：勉強会の申込からリマインドまで</div>
+<div class="c ai"><b>申込→日程確定→前日と当日朝のリマインド→キャンセル受付→カレンダー登録</b>人の手ゼロ</div><div class="c hu"><b>当日、話す</b>ここは人にしかできない</div>
+<div class="stepn">4　準備：提案書と面談メモ</div>
+<div class="c ai"><b>相談内容から下書きを作る</b>比較表・数字の整理</div><div class="c hu"><b>数字の最終確認、お客様の名前を呼ぶ</b>最初の挨拶と最後のお礼は自分で書く</div>
+<div class="stepn">5　事務：記録・報告</div>
+<div class="c ai"><b>面談後の記録、週次の数字、朝の予定</b>毎朝7時に届く</div><div class="c hu"><b>読んで、1つ決める</b>5分</div>
+<div class="stepn">6　学習：毎週、数字を見て直す</div>
+<div class="c ai"><b>届いた数・保存・問い合わせを集計</b>月曜の朝にレポート</div><div class="c hu"><b>何を増やすかを決める</b>AIは増やし方の案を出すだけ</div>
 </div>
 
-<h2>AIにやらせない3つのこと</h2>
+<h2>先に決めた「AIにやらせない3つ」</h2>
 <div class="gold"><ul style="margin:0"><li><b>お客様の名前を呼ぶのは僕。</b>最初の挨拶と、最後のお礼は自分で書く</li><li><b>断るのも僕。</b>お引き受けできない相談は、人が理由を添えて返す</li><li><b>お金の最終判断はAIに聞かない。</b>数字の下書きは任せる。決めるのは人</li></ul></div>
-<p>この3つを先に決めたから、残りを安心して渡せました。<br>順番が逆だと「AIに何をさせていいか分からない」で止まります。</p>
+<p>この3つを先に決めたから、残りを安心して渡せました。順番が逆だと「AIに何をさせていいか分からない」で止まります。</p>
 
-<h2>自社でも同じことができるか</h2>
-<p>保険代理店・士業・個人事業の方から「うちでも組めるか」と聞かれることが増えました。<br>仕組みの中身と、導入の流れはこちらにまとめています。</p>
+<h2>あなたの会社だと、どこから？</h2>
+<p>3つ答えると、最初に渡す仕事が出ます。</p>
+<div class="qcard" id="q1"><div class="qn">1 / 3</div><div class="qt">お仕事は？</div>
+<div class="chips" data-q="biz"><button class="chip">保険代理店</button><button class="chip">士業（税理士・社労士など）</button><button class="chip">不動産・住宅</button><button class="chip">コンサル・講師</button><button class="chip">店舗・サービス業</button><button class="chip">その他</button></div></div>
+<div class="qcard" id="q2"><div class="qn">2 / 3</div><div class="qt">いちばん時間を取られている仕事は？</div>
+<div class="chips" data-q="pain"><button class="chip">問い合わせへの返信</button><button class="chip">日程調整・リマインド</button><button class="chip">提案書・資料づくり</button><button class="chip">SNSやブログの更新</button><button class="chip">面談後の記録・報告</button><button class="chip">請求・事務</button></div></div>
+<div class="qcard" id="q3"><div class="qn">3 / 3</div><div class="qt">1日の問い合わせや連絡の数は？</div>
+<div class="chips" data-q="vol"><button class="chip">1〜5件</button><button class="chip">6〜20件</button><button class="chip">21件以上</button></div></div>
+
+<div class="result" id="result" hidden>
+<h2>最初に渡すなら、ここです</h2>
+<div class="rbox" id="rbox"></div>
+<p>仕組みの中身と導入の流れは、こちらにまとめています。</p>
 <a class="cta" href="https://mm738966m-boop.github.io/ai-aibou-shindan/hojin/?ref=IG_ai&utm_source=instagram&utm_medium=dm&utm_campaign=ai_zentaizo">営業と事務をAIで回す仕組みを見る</a>
-<p>「自社の場合はどこから？」を知りたい方は、InstagramのDMに<b>会社名と、いちばん時間を取られている仕事</b>を一言ください。僕が直接お返事します。</p>
-<p class="sig">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
-</div></body></html>
+<p>「自社の場合はどこから？」をもう少し具体的に知りたい方は、InstagramのDMに<b>会社名と、上で選んだ仕事</b>を一言ください。僕が直接お返事します。</p>
+</div>
+
+<p class="sig"><img src="../img/mascot_base.webp" alt="" style="width:80px;display:block;margin:0 auto 8px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
+</div>
+<script>
+const S={biz:'',pain:'',vol:''};
+try{Object.assign(S,JSON.parse(localStorage.getItem('ai')||'{}'))}catch(e){}
+document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q;g.querySelectorAll('.chip').forEach(b=>{if(S[q]===b.textContent)b.classList.add('on');b.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');S[q]=b.textContent;update();};});});
+const REC={
+ '問い合わせへの返信':['受付（2段目）','「よくある質問への一次返信」をAIに。人は返事が来たものだけ読む。1〜2週間で、返信にかかる時間が目に見えて減ります'],
+ '日程調整・リマインド':['案内（3段目）','申込→日程確定→前日リマインドを自動に。うちで最初に人の手がゼロになった場所です'],
+ '提案書・資料づくり':['準備（4段目）','相談メモを貼ると下書きが出る型を1つ作る。最終確認は人。1本30分が10分に近づきます'],
+ 'SNSやブログの更新':['入口（1段目）','伸びた投稿の型をAIに学ばせ、翌週分の案を出させる。載せる判断は人'],
+ '面談後の記録・報告':['事務（5段目）','面談の音声かメモから記録を自動で起こす。翌朝、読んで1つ決めるだけ'],
+ '請求・事務':['事務（5段目）','請求と記録の型を先に作る。AIは型に流し込む係にする']
+};
+const VOL={'1〜5件':'件数が少ないうちは「型づくり」が先。1つの仕事を丁寧に自動化すると、あとが速いです。','6〜20件':'この件数から自動化の効果がはっきり出ます。最初の1段を2週間で回し切るのがおすすめです。','21件以上':'人の手では追いつかない量です。受付（2段目）か案内（3段目）から入ると、すぐ楽になります。'};
+function update(){
+ try{localStorage.setItem('ai',JSON.stringify(S))}catch(e){}
+ ['biz','pain','vol'].forEach((q,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',!!S[q]));
+ const r=document.getElementById('result');
+ if(S.biz&&S.pain&&S.vol){const rec=REC[S.pain];document.getElementById('rbox').innerHTML=`<b>${S.biz}で、「${S.pain}」に時間を取られているなら</b><br>最初に渡すのは <b>${rec[0]}</b>。<br>${rec[1]}。<br><span class="note">${VOL[S.vol]}</span>`;r.hidden=false;}else r.hidden=true;
+}
+update();
+</script></body></html>
