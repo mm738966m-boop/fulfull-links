@@ -1,54 +1,65 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>社員ゼロで、お客様の案内と事務をAIが毎日回している全体像｜森川満章</title>
-<meta property="og:title" content="社員ゼロの会社で、お客様の案内と事務をAIが毎日回している全体像"><meta property="og:description" content="お金のプロの小さな会社が、営業と事務をAIに渡している6段の仕組み。3問答えると、あなたの会社で最初に渡せる仕事が出ます。森川満章"><meta property="og:type" content="article">
+<meta property="og:title" content="社員ゼロの会社で、お客様の案内と事務をAIが毎日回している全体像"><meta property="og:description" content="お金のプロの小さな会社が、営業と事務をAIに渡している6段の仕組み。3問答えると、あなたの会社で最初に渡せる仕事が出ます。森川満章"><meta property="og:type" content="article"><meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-links/ig/img/ai_hero.webp">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css">
 <style>
-.hero{display:grid;grid-template-columns:1fr 120px;gap:14px;align-items:end;padding-top:28px}.hero img{width:120px}
+.heroimg{width:100%;border-radius:18px;margin:14px 0 6px;display:block}
 .sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
-.lanes{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--line);border-radius:16px;overflow:hidden;margin:18px 0}
+.fact{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.fact div{background:var(--soft);border-radius:12px;padding:12px;text-align:center}.fact b{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:24px;color:var(--deep);line-height:1.2}.fact span{font-size:13.5px;color:var(--ink2);font-weight:700}
+.lanesimg{width:100%;border-radius:14px;display:block;margin:12px 0}
+.lanes{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--line);border-radius:16px;overflow:hidden;margin:12px 0}
 .lanes .h{padding:10px 12px;font-weight:900;text-align:center;font-size:15px}
 .lanes .h.ai{background:var(--teal);color:#fff}.lanes .h.hu{background:var(--goldbg);color:var(--gold)}
 .lanes .c{padding:12px 14px;border-top:1px solid var(--line);font-size:15.5px;line-height:1.7}
 .lanes .c.ai{background:#F6FBFB}.lanes .c.hu{background:#FFFCF4}
 .lanes .c b{display:block;color:var(--deep);font-size:16px}
-.stepn{grid-column:1/3;background:var(--soft);padding:6px 14px;font-weight:900;color:var(--deep);font-size:14.5px;letter-spacing:.06em;border-top:2px solid var(--line)}
-.fact{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.fact div{background:var(--soft);border-radius:12px;padding:12px;text-align:center}.fact b{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:26px;color:var(--deep);line-height:1.2}.fact span{font-size:13.5px;color:var(--ink2);font-weight:700}
-.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0}.qcard.done{border-color:var(--teal)}
+.stepn{grid-column:1/3;background:var(--soft);padding:6px 14px;font-weight:900;color:var(--deep);font-size:14.5px;letter-spacing:.06em;border-top:2px solid var(--line);display:flex;align-items:center;gap:8px}
+.stepn i{width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-style:normal;font-size:13px}
+.guide{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:center;background:var(--soft);border-radius:16px;padding:12px 16px;margin:18px 0;position:sticky;top:8px;z-index:3}
+.guide img{width:70px;transition:transform .35s}.guide.bounce img{transform:translateY(-6px) rotate(-6deg)}
+.guide b{display:block;color:var(--deep)}.guide small{color:var(--ink2)}
+.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0;transition:border-color .3s,box-shadow .3s}
+.qcard.done{border-color:var(--teal);box-shadow:0 6px 18px rgba(14,124,134,.12)}
+.qcard .ok{float:right;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:none;place-items:center;font-weight:900}.qcard.done .ok{display:grid;animation:pop .35s}
 .qn{font-size:13.5px;color:var(--teal);font-weight:900;letter-spacing:.1em}
 .qt{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:900;font-size:20px;color:var(--deep);margin:4px 0 10px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer}
-.chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
-.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal)}
-.result h2{border:0;margin:0;padding:0;font-size:21px}
-.rbox{background:#fff;border-radius:12px;padding:14px 16px;margin:12px 0;border:2px dashed var(--line)}
-.rbox b{color:var(--deep)}
-@media(max-width:640px){.hero{grid-template-columns:1fr 90px}.hero img{width:90px}.fact{grid-template-columns:1fr 1fr 1fr}.fact b{font-size:19px}}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;transition:transform .12s,background .2s}
+.chip:active{transform:scale(.95)}.chip.on{background:var(--teal);border-color:var(--teal);color:#fff;animation:pop .3s}
+@keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal);animation:rise .5s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.result h2{border:0;margin:0;padding:0;font-size:22px}
+.rgrid{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:start;margin:12px 0}.rgrid img{width:120px;border-radius:14px}
+.rbox{background:#fff;border-radius:12px;padding:14px 16px;border:2px dashed var(--line)}.rbox b{color:var(--deep)}
+canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:9}
+@media(max-width:640px){.fact b{font-size:19px}.guide{grid-template-columns:56px 1fr}.guide img{width:56px}.rgrid{grid-template-columns:90px 1fr}.rgrid img{width:90px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head>
 <body><div class="wrap">
-<div class="hero"><div>
-<div class="eyebrow" style="margin-top:0">コメント「AI」の1枚</div>
+<div class="eyebrow" style="margin-top:28px">コメント「AI」の1枚</div>
 <h1>社員ゼロの会社で、お客様の案内と事務をAIが毎日回しています</h1>
-<p class="sub">やったのは「人がやる仕事」と「AIに渡す仕事」を分けただけ。<br>全体像を1枚にしました。最後に<b>3問答えると、あなたの会社で最初に渡せる仕事</b>が出ます。</p>
-</div><img src="../img/mascot_point.webp" alt=""></div>
+<img class="heroimg" src="../img/ai_hero.webp" alt="机で電話をする人のまわりで、小さなロボたちが封筒を運び、カレンダーに印をつけ、タイプしている絵">
+<p class="sub">やったのは「人がやる仕事」と「AIに渡す仕事」を分けただけ。全体像を1枚にしました。<br>最後に<b>3問答えると、あなたの会社で最初に渡せる仕事</b>が出ます。</p>
 
 <div class="fact"><div><b>1日2本</b><span>投稿が自動で出る</span></div><div><b>手間ゼロ</b><span>勉強会の申込〜前日リマインド</span></div><div><b>朝7時</b><span>その日の予定と数字が届く</span></div></div>
 <p class="note">数字は実際に動いている仕組みのものだけを書いています。</p>
 
 <h2>全体像：左がAI、右が人</h2>
+<img class="lanesimg" src="../img/ai_lanes.webp" alt="AIの道と人の道が、1つのドアで合流する絵">
 <div class="lanes">
 <div class="h ai">AIがやる</div><div class="h hu">人（僕）がやる</div>
-<div class="stepn">1　入口：毎日の発信</div>
+<div class="stepn"><i>1</i>入口：毎日の発信</div>
 <div class="c ai"><b>伸びた投稿の型を学んで、翌週の案を書く</b>Threads・Instagram・音声配信。1日2本は自動で出る</div><div class="c hu"><b>載せるかどうかを決める</b>実話は自分の言葉に直す</div>
-<div class="stepn">2　受付：合言葉にDMで返す</div>
+<div class="stepn"><i>2</i>受付：合言葉にDMで返す</div>
 <div class="c ai"><b>コメントの合言葉に資料をDM</b>7日以内の人にだけ。1日4回巡回</div><div class="c hu"><b>こちらからの勧誘DMはしない</b>返事が来たら人が読む</div>
-<div class="stepn">3　案内：勉強会の申込からリマインドまで</div>
+<div class="stepn"><i>3</i>案内：勉強会の申込からリマインドまで</div>
 <div class="c ai"><b>申込→日程確定→前日と当日朝のリマインド→キャンセル受付→カレンダー登録</b>人の手ゼロ</div><div class="c hu"><b>当日、話す</b>ここは人にしかできない</div>
-<div class="stepn">4　準備：提案書と面談メモ</div>
+<div class="stepn"><i>4</i>準備：提案書と面談メモ</div>
 <div class="c ai"><b>相談内容から下書きを作る</b>比較表・数字の整理</div><div class="c hu"><b>数字の最終確認、お客様の名前を呼ぶ</b>最初の挨拶と最後のお礼は自分で書く</div>
-<div class="stepn">5　事務：記録・報告</div>
+<div class="stepn"><i>5</i>事務：記録・報告</div>
 <div class="c ai"><b>面談後の記録、週次の数字、朝の予定</b>毎朝7時に届く</div><div class="c hu"><b>読んで、1つ決める</b>5分</div>
-<div class="stepn">6　学習：毎週、数字を見て直す</div>
+<div class="stepn"><i>6</i>学習：毎週、数字を見て直す</div>
 <div class="c ai"><b>届いた数・保存・問い合わせを集計</b>月曜の朝にレポート</div><div class="c hu"><b>何を増やすかを決める</b>AIは増やし方の案を出すだけ</div>
 </div>
 
@@ -57,17 +68,17 @@
 <p>この3つを先に決めたから、残りを安心して渡せました。順番が逆だと「AIに何をさせていいか分からない」で止まります。</p>
 
 <h2>あなたの会社だと、どこから？</h2>
-<p>3つ答えると、最初に渡す仕事が出ます。</p>
-<div class="qcard" id="q1"><div class="qn">1 / 3</div><div class="qt">お仕事は？</div>
+<div class="guide" id="guide"><img id="gimg" src="../img/mascot_invite.webp" alt=""><div><b id="gtxt">3つ答えると、最初に渡す仕事が出ます</b><small id="gsub">0 / 3</small></div></div>
+<div class="qcard" id="q1"><span class="ok">✓</span><div class="qn">1 / 3</div><div class="qt">お仕事は？</div>
 <div class="chips" data-q="biz"><button class="chip">保険代理店</button><button class="chip">士業（税理士・社労士など）</button><button class="chip">不動産・住宅</button><button class="chip">コンサル・講師</button><button class="chip">店舗・サービス業</button><button class="chip">その他</button></div></div>
-<div class="qcard" id="q2"><div class="qn">2 / 3</div><div class="qt">いちばん時間を取られている仕事は？</div>
+<div class="qcard" id="q2"><span class="ok">✓</span><div class="qn">2 / 3</div><div class="qt">いちばん時間を取られている仕事は？</div>
 <div class="chips" data-q="pain"><button class="chip">問い合わせへの返信</button><button class="chip">日程調整・リマインド</button><button class="chip">提案書・資料づくり</button><button class="chip">SNSやブログの更新</button><button class="chip">面談後の記録・報告</button><button class="chip">請求・事務</button></div></div>
-<div class="qcard" id="q3"><div class="qn">3 / 3</div><div class="qt">1日の問い合わせや連絡の数は？</div>
+<div class="qcard" id="q3"><span class="ok">✓</span><div class="qn">3 / 3</div><div class="qt">1日の問い合わせや連絡の数は？</div>
 <div class="chips" data-q="vol"><button class="chip">1〜5件</button><button class="chip">6〜20件</button><button class="chip">21件以上</button></div></div>
 
 <div class="result" id="result" hidden>
-<h2>最初に渡すなら、ここです</h2>
-<div class="rbox" id="rbox"></div>
+<h2>最初に渡すなら、ここです🎉</h2>
+<div class="rgrid"><img src="../img/ai_result.webp" alt="ロボがドアを開けて招き入れる絵"><div class="rbox" id="rbox"></div></div>
 <p>仕組みの中身と導入の流れは、こちらにまとめています。</p>
 <a class="cta" href="https://mm738966m-boop.github.io/ai-aibou-shindan/hojin/?ref=IG_ai&utm_source=instagram&utm_medium=dm&utm_campaign=ai_zentaizo">営業と事務をAIで回す仕組みを見る</a>
 <p>「自社の場合はどこから？」をもう少し具体的に知りたい方は、InstagramのDMに<b>会社名と、上で選んだ仕事</b>を一言ください。僕が直接お返事します。</p>
@@ -75,10 +86,13 @@
 
 <p class="sig"><img src="../img/mascot_base.webp" alt="" style="width:80px;display:block;margin:0 auto 8px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
 </div>
+<canvas id="conf"></canvas>
 <script>
 const S={biz:'',pain:'',vol:''};
 try{Object.assign(S,JSON.parse(localStorage.getItem('ai')||'{}'))}catch(e){}
-document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q;g.querySelectorAll('.chip').forEach(b=>{if(S[q]===b.textContent)b.classList.add('on');b.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');S[q]=b.textContent;update();};});});
+const GUIDE=[["mascot_invite","3つ答えると、最初に渡す仕事が出ます"],["mascot_point","いちばん重い仕事を1つだけ"],["mascot_think","ざっくりで大丈夫です"],["mascot_base","出ました！下をどうぞ"]];
+let celebrated=false;
+document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q;g.querySelectorAll('.chip').forEach(b=>{if(S[q]===b.textContent)b.classList.add('on');b.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));b.classList.add('on');S[q]=b.textContent;update(true);};});});
 const REC={
  '問い合わせへの返信':['受付（2段目）','「よくある質問への一次返信」をAIに。人は返事が来たものだけ読む。1〜2週間で、返信にかかる時間が目に見えて減ります'],
  '日程調整・リマインド':['案内（3段目）','申込→日程確定→前日リマインドを自動に。うちで最初に人の手がゼロになった場所です'],
@@ -88,11 +102,16 @@ const REC={
  '請求・事務':['事務（5段目）','請求と記録の型を先に作る。AIは型に流し込む係にする']
 };
 const VOL={'1〜5件':'件数が少ないうちは「型づくり」が先。1つの仕事を丁寧に自動化すると、あとが速いです。','6〜20件':'この件数から自動化の効果がはっきり出ます。最初の1段を2週間で回し切るのがおすすめです。','21件以上':'人の手では追いつかない量です。受付（2段目）か案内（3段目）から入ると、すぐ楽になります。'};
-function update(){
+function update(fromTap){
  try{localStorage.setItem('ai',JSON.stringify(S))}catch(e){}
- ['biz','pain','vol'].forEach((q,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',!!S[q]));
+ const done=['biz','pain','vol'].map(q=>!!S[q]); const n=done.filter(Boolean).length;
+ done.forEach((d,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',d));
+ const next=done.indexOf(false); const g=GUIDE[next<0?3:next];
+ document.getElementById('gimg').src='../img/'+g[0]+'.webp'; document.getElementById('gtxt').textContent=g[1]; document.getElementById('gsub').textContent=n+' / 3';
+ if(fromTap){const gd=document.getElementById('guide');gd.classList.add('bounce');setTimeout(()=>gd.classList.remove('bounce'),350);}
  const r=document.getElementById('result');
- if(S.biz&&S.pain&&S.vol){const rec=REC[S.pain];document.getElementById('rbox').innerHTML=`<b>${S.biz}で、「${S.pain}」に時間を取られているなら</b><br>最初に渡すのは <b>${rec[0]}</b>。<br>${rec[1]}。<br><span class="note">${VOL[S.vol]}</span>`;r.hidden=false;}else r.hidden=true;
+ if(done.every(Boolean)){const was=r.hidden;const rec=REC[S.pain];document.getElementById('rbox').innerHTML=`<b>${S.biz}で、「${S.pain}」に時間を取られているなら</b><br>最初に渡すのは <b>${rec[0]}</b>。<br>${rec[1]}。<br><span class="note">${VOL[S.vol]}</span>`;r.hidden=false;if(was&&fromTap&&!celebrated){celebrated=true;confetti();r.scrollIntoView({behavior:'smooth',block:'start'});}}else{r.hidden=true;celebrated=false;}
 }
-update();
+function confetti(){const c=document.getElementById('conf'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const P=[];for(let i=0;i<120;i++)P.push({x:Math.random()*c.width,y:-20-Math.random()*200,r:4+Math.random()*5,v:2+Math.random()*3,a:Math.random()*6.28,col:['#D9A441','#0E7C86','#5CC2CB','#F2C94C'][i%4]});let t=0;(function f(){x.clearRect(0,0,c.width,c.height);t++;P.forEach(p=>{p.y+=p.v;p.x+=Math.sin((t+p.a)/10);x.fillStyle=p.col;x.fillRect(p.x,p.y,p.r,p.r*1.6)});if(t<160)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height)})();}
+update(false);
 </script></body></html>

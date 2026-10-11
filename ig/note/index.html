@@ -1,69 +1,79 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>家族に「どうしたい？」と聞ける文章が5分でできる紙｜森川満章</title>
-<meta property="og:title" content="家族に「どうしたい？」と聞ける文章が、5分でできる紙"><meta property="og:description" content="タップで5つ答えると、家族に送る一言ができあがります。お金の揉めごとの9割は「話さなかったこと」で起きます。お金のプロ 森川満章"><meta property="og:type" content="article">
+<meta property="og:title" content="家族に「どうしたい？」と聞ける文章が、5分でできる紙"><meta property="og:description" content="タップで5つ答えると、家族に送る一言ができあがります。お金の揉めごとの9割は「話さなかったこと」で起きます。お金のプロ 森川満章"><meta property="og:type" content="article"><meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-links/ig/img/note_hero.webp">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../base.css">
 <style>
-.hero{display:grid;grid-template-columns:1fr 120px;gap:14px;align-items:end;padding-top:28px}.hero img{width:120px}
+.heroimg{width:100%;border-radius:18px;margin:14px 0 6px;display:block}
 .sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
-.pill{display:inline-block;background:var(--soft);color:var(--deep);border-radius:999px;padding:2px 12px;font-size:14px;font-weight:700;margin:4px 6px 0 0}
-.sample{background:var(--card,#fff);border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:14px 0;position:relative}
+.sample{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:14px 0;position:relative}
 .sample .lab{position:absolute;top:-12px;left:14px;background:var(--goldfill);color:#1C3236;font-size:13.5px;font-weight:900;border-radius:999px;padding:1px 10px}
 .sample p{margin:6px 0;font-size:17px}
-.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0}
-.qcard.done{border-color:var(--teal)}
+.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}.why div{background:var(--soft);border-radius:12px;padding:12px;text-align:center;font-weight:700;font-size:15px;color:var(--deep)}
+.guide{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:center;background:var(--soft);border-radius:16px;padding:12px 16px;margin:18px 0;position:sticky;top:8px;z-index:3}
+.guide img{width:70px;transition:transform .35s}.guide.bounce img{transform:translateY(-6px) rotate(-6deg)}
+.guide b{display:block;color:var(--deep)}.guide small{color:var(--ink2)}
+.prog{display:flex;gap:6px;margin:6px 0 0}.prog i{flex:1;height:8px;border-radius:4px;background:var(--line);transition:background .3s}.prog i.on{background:var(--teal)}
+.qcard{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0;transition:border-color .3s,box-shadow .3s}
+.qcard.done{border-color:var(--teal);box-shadow:0 6px 18px rgba(14,124,134,.12)}
+.qcard .ok{float:right;width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;display:none;place-items:center;font-weight:900}.qcard.done .ok{display:grid;animation:pop .35s}
 .qn{font-size:13.5px;color:var(--teal);font-weight:900;letter-spacing:.1em}
 .qt{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:900;font-size:20px;color:var(--deep);margin:4px 0 10px}
+.qimg{width:100%;border-radius:12px;margin:0 0 12px;display:block}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer}
-.chip.on{background:var(--teal);border-color:var(--teal);color:#fff}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;transition:transform .12s,background .2s}
+.chip:active{transform:scale(.95)}.chip.on{background:var(--teal);border-color:var(--teal);color:#fff;animation:pop .3s}
+@keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
 .free{width:100%;margin-top:10px;border:2px solid var(--line);border-radius:12px;padding:10px 12px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
-.prog{display:flex;gap:6px;margin:14px 0 4px}.prog i{flex:1;height:8px;border-radius:4px;background:var(--line)}.prog i.on{background:var(--teal)}
-.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal)}
-.result h2{border:0;margin:0;padding:0;font-size:21px}
+.result{background:var(--soft);border-radius:18px;padding:18px 20px;margin:22px 0;border:2px solid var(--teal);position:relative;overflow:hidden;animation:rise .5s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.result h2{border:0;margin:0;padding:0;font-size:22px}
+.result .doneimg{width:100%;max-width:420px;display:block;margin:10px auto;border-radius:14px}
 .msg{background:#fff;border-radius:12px;padding:14px 16px;margin:12px 0;font-size:17px;line-height:1.8;white-space:pre-wrap;border:2px dashed var(--line)}
 .btn{display:inline-block;border:0;border-radius:999px;padding:12px 20px;font:inherit;font-size:16px;font-weight:900;cursor:pointer;background:var(--teal);color:#fff}
 .btn.ghost{background:#fff;color:var(--teal);border:2px solid var(--teal)}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:14px 0}.why div{background:var(--soft);border-radius:12px;padding:12px;text-align:center;font-weight:700;font-size:15px;color:var(--deep)}
-@media(max-width:640px){.hero{grid-template-columns:1fr 90px}.hero img{width:90px}.why{grid-template-columns:1fr}}
+canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:9}
+@media(max-width:640px){.why{grid-template-columns:1fr}.guide{grid-template-columns:56px 1fr}.guide img{width:56px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head>
 <body><div class="wrap">
-<div class="hero"><div>
-<div class="eyebrow" style="margin-top:0">コメント「設計ノート」の紙</div>
+<div class="eyebrow" style="margin-top:28px">コメント「設計ノート」の紙</div>
 <h1>家族に「どうしたい？」と聞ける文章が、5分でできます</h1>
-<p class="sub">5つ、タップで答えるだけ。<br>最後に<b>家族に送る一言</b>ができあがります。入力した内容はこの端末の中だけに残り、どこにも送られません。</p>
-</div><img src="../img/mascot_invite.webp" alt=""></div>
+<img class="heroimg" src="../img/note_hero.webp" alt="食卓で母と娘が紙を見ながら話している絵">
+<p class="sub">5つ、タップで答えるだけ。最後に<b>家族に送る一言</b>ができあがります。<br>入力した内容はこの端末の中だけに残り、どこにも送られません。</p>
 
 <div class="sample"><span class="lab">できあがりの例</span>
 <p>「お母さんの家と預金のこと、いま決まっていないのは『誰が住むか』と『介護のお金』だと思ってる。<br>金額の話より先に、お母さんが本当はどうしたいかを一度聞きたい。<br>今度の日曜、電話で5分だけいい？」</p>
-<p class="note" style="margin:8px 0 0">↑ こういう文章が、あなたの答えから自動で組み上がります。そのままLINEで送れます。</p></div>
+<p class="note" style="margin:8px 0 0">↑ あなたの答えから、こういう文章が自動で組み上がります。そのままLINEで送れます。</p></div>
 
 <div class="why"><div>揉めごとの9割は<br>「話さなかったこと」</div><div>だから先に<br>自分の頭を整える</div><div>決めなくていい<br>一度、言葉にする</div></div>
 
-<div class="prog" id="prog"><i></i><i></i><i></i><i></i><i></i></div>
+<div class="guide" id="guide"><img id="gimg" src="../img/mascot_invite.webp" alt=""><div><b id="gtxt">まず1つ目から。タップするだけです</b><small id="gsub">0 / 5</small><div class="prog" id="prog"><i></i><i></i><i></i><i></i><i></i></div></div></div>
 
-<div class="qcard" id="q1"><div class="qn">1 / 5</div><div class="qt">誰の、どのお金の話ですか？</div>
+<div class="qcard" id="q1"><span class="ok">✓</span><div class="qn">1 / 5</div><div class="qt">誰の、どのお金の話ですか？</div>
 <div class="chips" data-q="who" data-single="1"><button class="chip">親の家と預金</button><button class="chip">夫婦の生活費</button><button class="chip">子どもの教育費</button><button class="chip">自分たちの老後</button><button class="chip">相続・遺産</button><button class="chip">実家の処分</button></div>
 <input class="free" id="who_free" placeholder="その他（例：弟に貸したお金）"></div>
 
-<div class="qcard" id="q2"><div class="qn">2 / 5</div><div class="qt">いま「決まっていないこと」はどれですか？（いくつでも）</div>
+<div class="qcard" id="q2"><span class="ok">✓</span><div class="qn">2 / 5</div><div class="qt">いま「決まっていないこと」はどれですか？（いくつでも）</div>
 <div class="chips" data-q="undecided"><button class="chip">誰が住むか</button><button class="chip">介護のお金</button><button class="chip">毎月いくら出すか</button><button class="chip">いつ使うか</button><button class="chip">誰が管理するか</button><button class="chip">分け方</button><button class="chip">そもそも話していない</button></div></div>
 
-<div class="qcard" id="q3"><div class="qn">3 / 5</div><div class="qt">そのお金で、いちばん心配なのはどの箱ですか？</div>
+<div class="qcard" id="q3"><span class="ok">✓</span><div class="qn">3 / 5</div><div class="qt">そのお金で、いちばん心配なのはどの箱ですか？</div>
+<img class="qimg" src="../img/note_boxes.webp" alt="3つの箱にお金を分ける絵">
 <div class="chips" data-q="box" data-single="1"><button class="chip">いま使うお金（1年以内）</button><button class="chip">近い将来の出費（5年以内）</button><button class="chip">ずっと先（老後・相続）</button></div>
 <p class="note" style="margin:10px 0 0">お金は「いま・近い将来・ずっと先」の3つの箱に分けると、話が早くなります。</p></div>
 
-<div class="qcard" id="q4"><div class="qn">4 / 5</div><div class="qt">本当は、どうしたいですか？</div>
+<div class="qcard" id="q4"><span class="ok">✓</span><div class="qn">4 / 5</div><div class="qt">本当は、どうしたいですか？</div>
 <div class="chips" data-q="feel" data-single="1"><button class="chip">揉めたくない</button><button class="chip">先に気持ちを聞きたい</button><button class="chip">数字をはっきりさせたい</button><button class="chip">自分だけで抱えたくない</button><button class="chip">公平にしたい</button></div>
 <input class="free" id="feel_free" placeholder="ひとこと足すなら（例：せめて一言欲しい）"></div>
 
-<div class="qcard" id="q5"><div class="qn">5 / 5</div><div class="qt">誰に、いつ聞きますか？</div>
+<div class="qcard" id="q5"><span class="ok">✓</span><div class="qn">5 / 5</div><div class="qt">誰に、いつ聞きますか？</div>
 <input class="free" id="to" placeholder="相手（例：お母さん／夫／姉）" style="margin-top:0">
 <div class="chips" data-q="when" data-single="1" style="margin-top:10px"><button class="chip">今日</button><button class="chip">今週中</button><button class="chip">今度の週末</button><button class="chip">来月</button></div>
 <div class="chips" data-q="how" data-single="1" style="margin-top:10px"><button class="chip">電話で5分</button><button class="chip">会ったときに</button><button class="chip">LINEで</button></div></div>
 
 <div class="result" id="result" hidden>
-<h2>できあがりました</h2>
+<h2>できあがりました🎉</h2>
+<img class="doneimg" src="../img/note_done.webp" alt="スマホから紙飛行機が飛び立つ絵">
 <p class="note">そのまま送っても、言い回しを直しても大丈夫です。決めるための文章ではなく、聞くための文章です。</p>
 <div class="msg" id="msg"></div>
 <div class="row"><button class="btn" id="copy" type="button">文章をコピー</button><button class="btn ghost" id="reset" type="button">書き直す</button><span class="note" id="copied"></span></div>
@@ -73,18 +83,26 @@
 
 <p class="sig"><img src="../img/mascot_base.webp" alt="" style="width:80px;display:block;margin:0 auto 8px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>書いてみて迷ったところは、InstagramのDMに送ってください。僕が読みます。</p>
 </div>
+<canvas id="conf"></canvas>
 <script>
 const S={who:[],undecided:[],box:[],feel:[],when:[],how:[]};
 try{Object.assign(S,JSON.parse(localStorage.getItem('note')||'{}'))}catch(e){}
-document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q,single=!!g.dataset.single;g.querySelectorAll('.chip').forEach(b=>{if(S[q].includes(b.textContent))b.classList.add('on');b.onclick=()=>{if(single){g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));S[q]=[b.textContent];b.classList.add('on');}else{b.classList.toggle('on');S[q]=[...g.querySelectorAll('.chip.on')].map(x=>x.textContent);}update();};});});
-['who_free','feel_free','to'].forEach(id=>{const el=document.getElementById(id);el.value=S[id]||'';el.oninput=()=>{S[id]=el.value;update();};});
+const GUIDE=[["mascot_invite","まず1つ目から。タップするだけです"],["mascot_point","いい調子。決まっていないことは、いくつ選んでも大丈夫"],["mascot_think","心配な箱を1つだけ。迷ったら「ずっと先」"],["mascot_point","気持ちが先。金額はあとで"],["mascot_invite","最後です。相手と、いつ聞くか"],["mascot_base","できあがり！下に文章が出ています"]];
+let celebrated=false;
+document.querySelectorAll('.chips').forEach(g=>{const q=g.dataset.q,single=!!g.dataset.single;g.querySelectorAll('.chip').forEach(b=>{if(S[q].includes(b.textContent))b.classList.add('on');b.onclick=()=>{if(single){g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));S[q]=[b.textContent];b.classList.add('on');}else{b.classList.toggle('on');S[q]=[...g.querySelectorAll('.chip.on')].map(x=>x.textContent);}update(true);};});});
+['who_free','feel_free','to'].forEach(id=>{const el=document.getElementById(id);el.value=S[id]||'';el.oninput=()=>{S[id]=el.value;update(false);};});
 function val(q,free){const v=S[q][0]||'';const f=(S[free]||'').trim();return f||v;}
-function update(){
+function update(fromTap){
  try{localStorage.setItem('note',JSON.stringify(S))}catch(e){}
  const done=[!!val('who','who_free'),S.undecided.length>0,S.box.length>0,!!val('feel','feel_free'),!!(S.to||'').trim()&&S.when.length>0];
+ const n=done.filter(Boolean).length;
  document.querySelectorAll('#prog i').forEach((i,k)=>i.classList.toggle('on',done[k]));
  done.forEach((d,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',d));
- const r=document.getElementById('result'); if(done.every(Boolean)){r.hidden=false;document.getElementById('msg').textContent=build();}else{r.hidden=true;}
+ const next=done.indexOf(false); const g=GUIDE[next<0?5:next];
+ document.getElementById('gimg').src='../img/'+g[0]+'.webp'; document.getElementById('gtxt').textContent=g[1]; document.getElementById('gsub').textContent=n+' / 5';
+ if(fromTap){const gd=document.getElementById('guide');gd.classList.add('bounce');setTimeout(()=>gd.classList.remove('bounce'),350);}
+ const r=document.getElementById('result');
+ if(done.every(Boolean)){const was=r.hidden;r.hidden=false;document.getElementById('msg').textContent=build();if(was&&fromTap&&!celebrated){celebrated=true;confetti();r.scrollIntoView({behavior:'smooth',block:'start'});}}else{r.hidden=true;celebrated=false;}
 }
 function build(){
  const who=val('who','who_free'),to=(S.to||'').trim(),und=S.undecided.filter(x=>x!=='そもそも話していない'),talked=S.undecided.includes('そもそも話していない');
@@ -100,7 +118,8 @@ function build(){
  m+=`\n${S.when[0]||''}、${how}いい？\n決めなくていいから、気持ちだけ教えてほしい。`;
  return m;
 }
+function confetti(){const c=document.getElementById('conf'),x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;const P=[];for(let i=0;i<120;i++)P.push({x:Math.random()*c.width,y:-20-Math.random()*200,r:4+Math.random()*5,v:2+Math.random()*3,a:Math.random()*6.28,col:['#D9A441','#0E7C86','#5CC2CB','#F2C94C'][i%4]});let t=0;(function f(){x.clearRect(0,0,c.width,c.height);t++;P.forEach(p=>{p.y+=p.v;p.x+=Math.sin((t+p.a)/10);x.fillStyle=p.col;x.fillRect(p.x,p.y,p.r,p.r*1.6)});if(t<160)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height)})();}
 document.getElementById('copy').onclick=async()=>{const t=document.getElementById('msg').textContent;try{await navigator.clipboard.writeText(t);document.getElementById('copied').textContent='コピーしました';}catch(e){const r=document.createRange();r.selectNodeContents(document.getElementById('msg'));const s=getSelection();s.removeAllRanges();s.addRange(r);document.getElementById('copied').textContent='長押しでコピーしてください';}};
-document.getElementById('reset').onclick=()=>{Object.keys(S).forEach(k=>S[k]=Array.isArray(S[k])?[]:'');try{localStorage.removeItem('note')}catch(e){}document.querySelectorAll('.chip').forEach(b=>b.classList.remove('on'));['who_free','feel_free','to'].forEach(id=>document.getElementById(id).value='');update();window.scrollTo({top:0,behavior:'smooth'});};
-update();
+document.getElementById('reset').onclick=()=>{Object.keys(S).forEach(k=>S[k]=Array.isArray(S[k])?[]:'');try{localStorage.removeItem('note')}catch(e){}document.querySelectorAll('.chip').forEach(b=>b.classList.remove('on'));['who_free','feel_free','to'].forEach(id=>document.getElementById(id).value='');update(false);window.scrollTo({top:0,behavior:'smooth'});};
+update(false);
 </script></body></html>
