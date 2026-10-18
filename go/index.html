@@ -11,7 +11,7 @@
   if (!/^https?:\/\//.test(to)) to = "https://fulfull.jp/";
   var id = "";
   try { id = localStorage.getItem("yk_id"); if(!id){ id = Math.random().toString(36).slice(2,10); localStorage.setItem("yk_id", id);} } catch(e){}
-  var q = new URLSearchParams({d: p.get("d")||"", s: p.get("s")||"", id: id, ua: /iPhone|iPad/.test(navigator.userAgent)?"ios":(/Android/.test(navigator.userAgent)?"android":"pc"), line: /Line\//.test(navigator.userAgent)?"1":"0"});
+  var q = new URLSearchParams({d: p.get("d")||"", s: p.get("s")||"", id: id, ua: /iPhone|iPad|iPod/i.test(navigator.userAgent)?"ios":(/Android/i.test(navigator.userAgent)?"android":(/Macintosh/.test(navigator.userAgent)&&navigator.maxTouchPoints>1?"ipad":"pc")), line: /Line\//i.test(navigator.userAgent)?"1":"0"});
   var done = false, go = function(){ if(done) return; done = true; location.replace(to); };
   if (API.indexOf("http") === 0) {
     try { fetch(API + "?" + q.toString(), {mode:"no-cors", keepalive:true}).then(go, go); } catch(e){ go(); }
