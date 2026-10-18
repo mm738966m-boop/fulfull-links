@@ -1,0 +1,24 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>記事へ移動しています</title>
+<style>body{font-family:system-ui,sans-serif;background:#f7f5ef;color:#1f2633;margin:0;display:grid;place-items:center;min-height:100vh;font-size:18px}a{color:#2f5f8a}</style>
+</head><body><div id="m">記事へ移動しています…</div>
+<script>
+(function(){
+  var API = "https://script.google.com/macros/s/AKfycbx7QnYsWl958Lw9dKhrI1QHf0Z-NYsHr8j8uXNtiGmcbmjpe66-V2ed0LtuVKviwpLl/exec";
+  var p = new URLSearchParams(location.search);
+  var to = p.get("to") || "https://fulfull.jp/";
+  try { new URL(to); } catch(e){ to = "https://fulfull.jp/"; }
+  if (!/^https?:\/\//.test(to)) to = "https://fulfull.jp/";
+  var id = "";
+  try { id = localStorage.getItem("yk_id"); if(!id){ id = Math.random().toString(36).slice(2,10); localStorage.setItem("yk_id", id);} } catch(e){}
+  var q = new URLSearchParams({d: p.get("d")||"", s: p.get("s")||"", id: id, ua: /iPhone|iPad/.test(navigator.userAgent)?"ios":(/Android/.test(navigator.userAgent)?"android":"pc"), line: /Line\//.test(navigator.userAgent)?"1":"0"});
+  var done = false, go = function(){ if(done) return; done = true; location.replace(to); };
+  if (API.indexOf("http") === 0) {
+    try { fetch(API + "?" + q.toString(), {mode:"no-cors", keepalive:true}).then(go, go); } catch(e){ go(); }
+    setTimeout(go, 700);
+  } else { go(); }
+  document.getElementById("m").innerHTML = '記事へ移動しています…<br><br><a href="' + to.replace(/"/g,"&quot;") + '">開かない方はこちら</a>';
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=https://fulfull.jp/"></noscript>
+</body></html>
