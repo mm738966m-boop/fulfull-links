@@ -32,6 +32,15 @@
 .result h2{border:0;margin:0;padding:0;font-size:22px}
 .rgrid{display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:start;margin:12px 0}.rgrid img{width:120px;border-radius:14px}
 .rbox{background:#fff;border-radius:12px;padding:14px 16px;border:2px dashed var(--line)}.rbox b{color:var(--deep)}
+
+.doors2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.door2{display:block;text-decoration:none;border-radius:18px;padding:16px 16px 14px;border:2px solid var(--line);background:#fff;color:var(--ink)}
+.door2 b{display:block;font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-size:18px;line-height:1.4;color:var(--deep)}
+.door2 small{display:block;font-size:13.5px;color:var(--ink2);margin-top:4px;line-height:1.6}
+.door2 span{display:inline-block;margin-top:10px;font-weight:900;font-size:14.5px;border-radius:999px;padding:6px 14px;color:#fff}
+.door2.w{border-color:var(--teal)}.door2.w span{background:var(--teal)}
+.door2.l{border-color:var(--gold)}.door2.l span{background:var(--gold)}
+@media(max-width:560px){.doors2{grid-template-columns:1fr}}
 canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:9}
 @media(max-width:640px){.fact b{font-size:19px}.guide{grid-template-columns:56px 1fr;position:static}.guide img{width:56px}.rgrid{grid-template-columns:1fr}.rgrid img{width:170px;margin:0 auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -44,6 +53,11 @@ canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:9}
 
 <div class="fact"><div><b>1日2本</b><span>投稿が自動で出る</span></div><div><b>手間ゼロ</b><span>勉強会の申込〜前日リマインド</span></div><div><b>朝7時</b><span>その日の予定と数字が届く</span></div></div>
 <p class="note">数字は実際に動いている仕組みのものだけを書いています。</p>
+<h2>あなたはどちら？</h2>
+<div class="doors2">
+<a class="door2 w" href="#guide"><b>仕事・会社で使いたい</b><small>経営者・金融・士業の方。3問で、最初にAIに渡す仕事が出ます</small><span>3問で見る →</span></a>
+<a class="door2 l" href="free/?ref=IG_ai"><b>自分の仕事や暮らしで使いたい</b><small>会社員・パート・主婦・個人の方。無料の7日間ミニ講座（1日5分）</small><span>無料講座を見る →</span></a>
+</div>
 
 <h2>全体像：左がAI、右が人</h2>
 <img class="lanesimg" src="../img/ai_lanes.webp" alt="AIの道と人の道が、1つのドアで合流する絵">
@@ -80,7 +94,7 @@ canvas#conf{position:fixed;inset:0;pointer-events:none;z-index:9}
 <h2>最初に渡すなら、ここです🎉</h2>
 <div class="rgrid"><img src="../img/ai_result.webp" alt="ロボがドアを開けて招き入れる絵"><div class="rbox" id="rbox"></div></div>
 <p>仕組みの中身と導入の流れは、こちらにまとめています。</p>
-<a class="cta" href="https://mm738966m-boop.github.io/ai-aibou-shindan/hojin/?ref=IG_ai&utm_source=instagram&utm_medium=dm&utm_campaign=ai_zentaizo">営業と事務をAIで回す仕組みを見る</a>
+<a class="cta" id="rcta" href="https://mm738966m-boop.github.io/ai-aibou-shindan/hojin/?ref=IG_ai&utm_source=instagram&utm_medium=dm&utm_campaign=ai_zentaizo">営業と事務をAIで回す仕組みを見る</a>
 <p>「自社の場合はどこから？」をもう少し具体的に知りたい方は、InstagramのDMに<b>会社名と、上で選んだ仕事</b>を一言ください。僕が直接お返事します。</p>
 </div>
 
@@ -102,7 +116,11 @@ const REC={
  '請求・事務':['事務（5段目）','請求と記録の型を先に作る。AIは型に流し込む係にする']
 };
 const VOL={'1〜5件':'件数が少ないうちは「型づくり」が先。1つの仕事を丁寧に自動化すると、あとが速いです。','6〜20件':'この件数から自動化の効果がはっきり出ます。最初の1段を2週間で回し切るのがおすすめです。','21件以上':'人の手では追いつかない量です。受付（2段目）か案内（3段目）から入ると、すぐ楽になります。'};
-function update(fromTap){
+const DEST={ // 業種ごとの行き先（2026-10-20 金融と一般で出口を分ける）
+ '保険代理店':['https://mm738966m-boop.github.io/ai-aibou-shindan/seminar/?ref=IG_ai_quiz','保険営業のAI仕事術勉強会（無料・Zoom）を見る'],
+ '士業（税理士・社労士など）':['https://mm738966m-boop.github.io/ai-aibou-shindan/shigyo/?ref=IG_ai_quiz','士業事務所のAI自動化を見る']};
+function setDest(){const a=document.getElementById('rcta');if(!a)return;const d=DEST[S.biz];if(d){a.href=d[0];a.textContent=d[1];}else{a.href='https://mm738966m-boop.github.io/ai-aibou-shindan/hojin/?ref=IG_ai&utm_source=instagram&utm_medium=dm&utm_campaign=ai_zentaizo';a.textContent='営業と事務をAIで回す仕組みを見る';}}
+function update(fromTap){ setDest();
  try{localStorage.setItem('ai',JSON.stringify(S))}catch(e){}
  const done=['biz','pain','vol'].map(q=>!!S[q]); const n=done.filter(Boolean).length;
  done.forEach((d,k)=>document.getElementById('q'+(k+1)).classList.toggle('done',d));
