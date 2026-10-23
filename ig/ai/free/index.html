@@ -17,6 +17,18 @@
 .box h2{border:0;margin:0 0 6px;padding:0;font-size:21px}
 .box p{color:var(--ink)}
 .btn{display:block;text-align:center;background:var(--deep);color:#fff;font-weight:900;font-size:17px;border-radius:999px;padding:14px 18px;text-decoration:none;margin:12px 0 4px}
+
+.wait{background:#fff;border:2px solid var(--gold);border-radius:18px;padding:18px 20px;margin:22px 0}
+.wait h2{border:0;margin:0 0 6px;padding:0;font-size:21px}
+.wait .pill{display:inline-block;background:var(--goldbg);color:var(--gold);font-weight:900;font-size:14px;border-radius:999px;padding:4px 14px;margin-bottom:8px}
+.meter{height:18px;background:var(--soft);border-radius:999px;overflow:hidden;margin:12px 0 6px;border:1px solid var(--line)}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#2aa39b);border-radius:999px;transition:width .6s}
+.cnt{display:flex;justify-content:space-between;font-size:15px;color:var(--ink2);font-weight:700}
+.cnt b{color:var(--deep);font-size:22px;font-family:"Zen Maru Gothic",sans-serif}
+.hand{display:block;width:100%;text-align:center;background:#06C755;color:#fff;font:inherit;font-weight:900;font-size:17px;border:0;border-radius:999px;padding:14px 18px;cursor:pointer;margin:12px 0 4px}
+.hand[disabled]{background:var(--line);color:var(--ink2);cursor:default}
+.ok{display:none;background:var(--soft);border-radius:12px;padding:10px 14px;margin-top:8px;font-weight:700;color:var(--deep)}
+.wait ul{margin:8px 0 0;padding-left:20px;font-size:15.5px;line-height:1.75}
 @media(max-width:640px){.fact b{font-size:19px}}
 </style></head>
 <body><div class="wrap">
@@ -46,6 +58,23 @@
 </div>
 <p class="note">講座ではClaudeという無料で使えるAIを使います。ChatGPTを使っている方も、同じやり方でできます。</p>
 
+
+<div class="wait" id="wait">
+<span class="pill">先行案内・準備中</span>
+<h2>「SNSをAIで回す講座」は、手を挙げた人が<span id="goal">30</span>人を超えたら公開します</h2>
+<p>僕がInstagramのリールを週4本、AIで作って投稿している仕組みを、プログラムを書かない人でも真似できる形にした4週間の講座です。自動いいね・自動フォロー・勧誘DMは使いません。公式の機能の範囲で、投稿と返信だけを仕組みにします。</p>
+<ul>
+<li>1週目：Claudeで台本・図解・投稿文を作る（手で予約投稿）</li>
+<li>2週目：型とテンプレートで、週の分をまとめて作る</li>
+<li>3週目：コメントの合言葉にDMで返す仕組み（公式の機能だけ）</li>
+<li>4週目：伸びた投稿と伸びなかった投稿を、AIに毎週比べさせる</li>
+</ul>
+<div class="meter"><i id="bar"></i></div>
+<div class="cnt"><span>いま <b id="count">–</b> 人</span><span>公開まで あと <b id="left">–</b> 人</span></div>
+<button type="button" class="hand" id="hand">興味あり（手を挙げる）</button>
+<div class="ok" id="okmsg">ありがとうございます。人数が集まったら、Instagramとこのページでお知らせします。</div>
+<p class="note" style="margin-top:8px">名前やメールは受け取りません。押した人数だけを数えています。</p>
+</div>
 <div class="box">
 <h2>始まったら、すぐにお知らせします</h2>
 <p>いま動画を収録しています。受け取りはLINEで、毎日1本ずつ届く形にする予定です。始まったときはInstagramでお知らせするので、フォローしておいてください。</p>
@@ -54,4 +83,16 @@
 </div>
 
 <p class="note" style="text-align:center;margin:26px 0 40px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
-</div></body></html>
+</div>
+<script>
+const API="https://script.google.com/macros/s/AKfycbz3gLVccJPzvW3WIQNlalxLS6CVGrAwjzO12aTfET5W2XUlmEi1UGhwrOtewnGkxkoxVA/exec"; const COURSE="sns";
+const $=id=>document.getElementById(id);
+function show(c,g){g=g||30;$("goal").textContent=g;$("count").textContent=c;$("left").textContent=Math.max(0,g-c);$("bar").style.width=Math.min(100,Math.round(c/g*100))+"%";}
+async function load(){if(!API.startsWith("http"))return;try{const r=await fetch(API+"?course="+COURSE,{cache:"no-store"});const j=await r.json();if(j.ok)show(j.count,j.goal)}catch(e){}}
+let done=false;try{done=localStorage.getItem("hand_"+COURSE)==="1"}catch(e){}
+if(done){$("hand").disabled=true;$("hand").textContent="手を挙げました";$("okmsg").style.display="block"}
+$("hand").addEventListener("click",async()=>{if(!API.startsWith("http"))return;$("hand").disabled=true;$("hand").textContent="送っています…";
+ try{const r=await fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({course:COURSE,src:location.search.slice(1)||"direct",ua:navigator.userAgent.slice(0,40)})});const j=await r.json();if(j.ok){show(j.count,j.goal);$("hand").textContent="手を挙げました";$("okmsg").style.display="block";try{localStorage.setItem("hand_"+COURSE,"1")}catch(e){}}else throw 0}
+ catch(e){$("hand").disabled=false;$("hand").textContent="もう一度押してください"}});
+load();
+</script></body></html>
