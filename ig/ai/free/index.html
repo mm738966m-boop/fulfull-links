@@ -25,8 +25,9 @@
 .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#2aa39b);border-radius:999px;transition:width .6s}
 .cnt{display:flex;justify-content:space-between;font-size:15px;color:var(--ink2);font-weight:700}
 .cnt b{color:var(--deep);font-size:22px;font-family:"Zen Maru Gothic",sans-serif}
-.hand{display:block;width:100%;text-align:center;background:#06C755;color:#fff;font:inherit;font-weight:900;font-size:17px;border:0;border-radius:999px;padding:14px 18px;cursor:pointer;margin:12px 0 4px}
+.hand{display:block;width:100%;box-sizing:border-box;text-decoration:none;text-align:center;background:#06C755;color:#fff;font:inherit;font-weight:900;font-size:17px;border:0;border-radius:999px;padding:14px 18px;cursor:pointer;margin:12px 0 4px}
 .hand[disabled]{background:var(--line);color:var(--ink2);cursor:default}
+.gift{background:var(--goldbg);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:15.5px;line-height:1.7}.gift b{display:block;color:var(--gold)}
 .ok{display:none;background:var(--soft);border-radius:12px;padding:10px 14px;margin-top:8px;font-weight:700;color:var(--deep)}
 .wait ul{margin:8px 0 0;padding-left:20px;font-size:15.5px;line-height:1.75}
 @media(max-width:640px){.fact b{font-size:19px}}
@@ -69,11 +70,12 @@
 <li>3週目：コメントの合言葉にDMで返す仕組み（公式の機能だけ）</li>
 <li>4週目：伸びた投稿と伸びなかった投稿を、AIに毎週比べさせる</li>
 </ul>
+<div class="gift"><b>手を挙げた方への特典</b>僕が実際にリールの台本をAIに書かせている指示文（Claude／ChatGPT用）を、LINEですぐお送りします。貼って元ネタを入れるだけで、60秒の台本と投稿文が出ます。</div>
 <div class="meter"><i id="bar"></i></div>
 <div class="cnt"><span>いま <b id="count">–</b> 人</span><span>公開まで あと <b id="left">–</b> 人</span></div>
-<button type="button" class="hand" id="hand">興味あり（手を挙げる）</button>
-<div class="ok" id="okmsg">ありがとうございます。人数が集まったら、Instagramとこのページでお知らせします。</div>
-<p class="note" style="margin-top:8px">名前やメールは受け取りません。押した人数だけを数えています。</p>
+<a class="hand" id="hand" href="https://utage-system.com/line/open/N6XhFH0EO2bW?mtid=kMm3HeTGHVwI">LINEで手を挙げる</a>
+<p class="note" style="margin-top:6px">LINEが開いたら、そのまま「送信」を押してください。それで手を挙げたことになります。</p>
+<p class="note">公開が決まったら、このLINEで最初にお知らせします。</p>
 </div>
 <div class="box">
 <h2>始まったら、すぐにお知らせします</h2>
@@ -88,11 +90,8 @@
 const API="https://script.google.com/macros/s/AKfycbz3gLVccJPzvW3WIQNlalxLS6CVGrAwjzO12aTfET5W2XUlmEi1UGhwrOtewnGkxkoxVA/exec"; const COURSE="sns";
 const $=id=>document.getElementById(id);
 function show(c,g){g=g||30;$("goal").textContent=g;$("count").textContent=c;$("left").textContent=Math.max(0,g-c);$("bar").style.width=Math.min(100,Math.round(c/g*100))+"%";}
-async function load(){if(!API.startsWith("http"))return;try{const r=await fetch(API+"?course="+COURSE,{cache:"no-store"});const j=await r.json();if(j.ok)show(j.count,j.goal)}catch(e){}}
-let done=false;try{done=localStorage.getItem("hand_"+COURSE)==="1"}catch(e){}
-if(done){$("hand").disabled=true;$("hand").textContent="手を挙げました";$("okmsg").style.display="block"}
-$("hand").addEventListener("click",async()=>{if(!API.startsWith("http"))return;$("hand").disabled=true;$("hand").textContent="送っています…";
- try{const r=await fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({course:COURSE,src:location.search.slice(1)||"direct",ua:navigator.userAgent.slice(0,40)})});const j=await r.json();if(j.ok){show(j.count,j.goal);$("hand").textContent="手を挙げました";$("okmsg").style.display="block";try{localStorage.setItem("hand_"+COURSE,"1")}catch(e){}}else throw 0}
- catch(e){$("hand").disabled=false;$("hand").textContent="もう一度押してください"}});
+async function load(){try{const r=await fetch(API+"?course="+COURSE,{cache:"no-store"});const j=await r.json();if(j.ok)show(j.count,j.goal)}catch(e){}}
+$("hand").addEventListener("click",()=>{let done=false;try{done=localStorage.getItem("hand_"+COURSE)==="1";localStorage.setItem("hand_"+COURSE,"1")}catch(e){}
+ if(!done){try{navigator.sendBeacon?fetch(API,{method:"POST",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({course:COURSE,src:location.search.slice(1)||"direct",ua:navigator.userAgent.slice(0,40)})}):0}catch(e){}}});
 load();
 </script></body></html>
