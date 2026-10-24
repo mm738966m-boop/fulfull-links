@@ -1,99 +1,160 @@
 <!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>無料｜1日5分・7日間のAIミニ講座｜森川満章</title>
-<meta name="description" content="暮らしと仕事で、AIを1つずつ使えるようにする無料の7日間ミニ講座。1日5分の動画と、小さな宿題が1つ。森川満章">
-<meta property="og:title" content="無料｜1日5分・7日間のAIミニ講座"><meta property="og:description" content="夕飯の相談、言いにくいLINE、レシートの写真から毎月のお金。暮らしと仕事で、AIを1つずつ使えるようにする7日間。"><meta property="og:type" content="article"><meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-links/ig/img/ai_hero.webp"><meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="夕飯の相談も、断りのLINEも、AIに5分で頼めるようになる7日間。無料・1日5分・LINEで毎朝1本。登録は画面の見本つき。森川満章">
+<meta property="og:title" content="夕飯の相談も、断りのLINEも、AIに5分で頼めるようになる7日間"><meta property="og:description" content="無料・1日5分・LINEで毎朝1本。夕飯の相談から始める、いちばんやさしいAI入門。"><meta property="og:type" content="article"><meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-links/ig/img/ai_hero.webp"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../../base.css">
 <style>
-.sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
-.badge{display:inline-block;background:var(--goldbg);color:var(--gold);font-weight:900;font-size:14px;border-radius:999px;padding:4px 14px;margin-top:10px}
-.fact{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.fact div{background:var(--soft);border-radius:12px;padding:12px;text-align:center}.fact b{display:block;font-family:"Zen Maru Gothic",sans-serif;font-size:22px;color:var(--deep)}.fact span{font-size:13.5px;color:var(--ink2)}
-.days{display:flex;flex-direction:column;gap:10px;margin:12px 0}
-.day{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:start;background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 14px}
-.day i{font-style:normal;font-family:"Zen Maru Gothic",sans-serif;font-weight:900;color:#fff;background:var(--teal);border-radius:12px;text-align:center;padding:8px 0;font-size:15px;line-height:1.2}
-.day b{display:block;color:var(--deep);font-size:16.5px}
-.day small{display:block;color:var(--ink2);font-size:14.5px;margin-top:2px}
-.for{display:grid;gap:8px;margin:10px 0}.for div{background:var(--soft);border-radius:12px;padding:10px 14px}
-.box{background:var(--soft);border:2px solid var(--teal);border-radius:18px;padding:18px 20px;margin:22px 0}
-.box h2{border:0;margin:0 0 6px;padding:0;font-size:21px}
-.box p{color:var(--ink)}
-.btn{display:block;text-align:center;background:var(--deep);color:#fff;font-weight:900;font-size:17px;border-radius:999px;padding:14px 18px;text-decoration:none;margin:12px 0 4px}
-
-.wait{background:#fff;border:2px solid var(--gold);border-radius:18px;padding:18px 20px;margin:22px 0}
-.wait h2{border:0;margin:0 0 6px;padding:0;font-size:21px}
-.wait .pill{display:inline-block;background:var(--goldbg);color:var(--gold);font-weight:900;font-size:14px;border-radius:999px;padding:4px 14px;margin-bottom:8px}
-.meter{height:18px;background:var(--soft);border-radius:999px;overflow:hidden;margin:12px 0 6px;border:1px solid var(--line)}
+/* ワクワクして軽い：ロボが案内・7日の道・その場で1分体験。文字は少なく大きく */
+.hero{display:grid;grid-template-columns:1fr 128px;gap:8px;align-items:end;margin-top:22px}
+.hero img{width:128px;justify-self:end}
+.kicker{display:inline-flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.kicker span{background:var(--goldbg);color:var(--gold);font-weight:900;font-size:14px;border-radius:999px;padding:4px 12px}
+.hero h1{font-size:clamp(26px,6.6vw,38px);line-height:1.3;word-break:keep-all}
+.hero h1 em{font-style:normal;color:var(--teal);background:linear-gradient(transparent 62%,#FBE8A6 62%);padding:0 2px}
+.lead{font-size:18px;color:#2b3f44;margin:12px 0 0}.who{font-size:16px;color:var(--deep);font-weight:700;margin:8px 0 0}
+.line{display:block;text-align:center;background:#06C755;color:#fff;text-decoration:none;font-weight:900;font-size:19px;border-radius:999px;padding:17px 22px;margin:18px 0 6px;box-shadow:0 8px 20px rgba(6,199,85,.25)}
+.hint{font-size:15px;color:#3e5257;text-align:center;margin:0}
+.what{margin:8px 0 0;padding-left:22px;font-size:15.5px;color:#2b3f44;line-height:1.7}.what li{margin:2px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 0}
+.chips span{border:2px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;font-weight:700;color:var(--deep);background:#fff}
+h2{border-top:0;padding-top:0;margin-top:44px;font-size:24px}
+.sub2{font-size:16.5px;color:#2b3f44;margin:4px 0 14px}
+.try{background:var(--soft);border-radius:20px;padding:18px 18px 16px;margin-top:8px}
+.try .q{font-weight:900;color:var(--deep);font-size:18px;margin:0 0 10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{border:2px solid var(--line);background:#fff;border-radius:14px;padding:12px 10px;font:inherit;font-size:16px;font-weight:700;color:var(--ink);cursor:pointer;text-align:center}
+.opt.on{border-color:var(--teal);background:var(--teal);color:#fff}
+.ask{display:none;margin-top:14px;background:#fff;border:2px dashed var(--line);border-radius:14px;padding:14px 16px}
+.ask.show{display:block;animation:rise .35s}
+.ask b{display:block;color:var(--teal);font-size:14px;letter-spacing:.08em;margin-bottom:6px}
+.ask p{margin:0;font-size:17px;line-height:1.8}
+.ask .row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ask button,.ask a{flex:1;min-width:130px;text-align:center;font:inherit;font-weight:900;font-size:15px;border-radius:999px;padding:11px 12px;cursor:pointer;text-decoration:none}
+.ask button{background:var(--deep);color:#fff;border:0}.ask a{background:#fff;color:var(--deep);border:2px solid var(--deep)}
+.ask small{display:block;color:#3e5257;font-size:14px;margin-top:8px}
+.eg{margin-top:10px;background:var(--soft);border-radius:12px;padding:10px 12px}.eg span{display:block;font-size:13px;color:var(--teal);font-weight:900;letter-spacing:.08em}.eg p{font-size:16px;color:#2b3f44;margin:2px 0 0}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.path{position:relative;margin-top:6px;padding-left:34px}
+.path:before{content:"";position:absolute;left:14px;top:14px;bottom:30px;width:6px;border-radius:6px;background:linear-gradient(var(--teal),var(--goldfill))}
+.day{position:relative;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px 16px 14px 18px;margin:0 0 12px;display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;cursor:pointer}
+.day:before{content:"";position:absolute;left:-26px;top:22px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--teal)}
+.day .ic{width:52px;height:52px;border-radius:14px;background:var(--soft);display:grid;place-items:center;color:var(--teal)}
+.day .ic svg{width:30px;height:30px}
+.day .t{font-size:13px;color:var(--teal);font-weight:900;letter-spacing:.08em}
+.day b{display:block;font-size:17.5px;color:var(--ink);line-height:1.45}
+.day small{display:block;color:#34484d;font-size:16px;margin-top:2px}
+.day .seal{position:absolute;right:12px;top:10px;width:58px;height:58px;border-radius:50%;border:3px solid var(--goldfill);color:var(--gold);font-weight:900;font-size:13px;display:grid;place-items:center;transform:rotate(-12deg) scale(0);transition:transform .25s;background:#fff}
+.day.done{border-color:var(--goldfill);background:var(--goldbg)}
+.day.done .seal{transform:rotate(-12deg) scale(1)}
+.pathnote{font-size:14.5px;color:#3e5257;margin:0 0 0 34px}
+.ba{display:grid;gap:10px;margin-top:8px}
+.ba div{display:grid;gap:4px;background:#fff;border:2px solid var(--line);border-radius:16px;padding:12px 16px;font-size:17px;font-weight:700}
+.ba .b{color:#5a6d72;font-size:15px}.ba .b:before{content:"いま　";color:#8a9aa0;font-size:13px}
+.ba .a{color:var(--deep);font-size:18px}.ba .a:before{content:"→　";color:var(--goldfill)}
+.me{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start;background:var(--soft);border-radius:20px;padding:16px;margin-top:8px}
+.me img{width:96px}
+.me p{margin:0 0 8px;font-size:17px}
+.me .nm{font-size:14px;color:var(--ink2)}
+.wait{background:#fff;border:2px solid var(--line);border-radius:18px;padding:18px 20px;margin:48px 0 0}
+.wait h3{margin:0 0 6px;font-size:19px;color:var(--deep)}.pill2{display:inline-block;background:var(--goldbg);color:var(--gold);font-weight:900;font-size:13px;border-radius:999px;padding:3px 12px;margin:0 0 8px}.cnt small{font-size:12px;color:#5a6d72;margin-left:6px}
+.meter{height:14px;background:var(--soft);border-radius:999px;overflow:hidden;margin:10px 0 4px;border:1px solid var(--line)}
 .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#2aa39b);border-radius:999px;transition:width .6s}
-.cnt{display:flex;justify-content:space-between;font-size:15px;color:var(--ink2);font-weight:700}
-.cnt b{color:var(--deep);font-size:22px;font-family:"Zen Maru Gothic",sans-serif}
-.hand{display:block;width:100%;box-sizing:border-box;text-decoration:none;text-align:center;background:#06C755;color:#fff;font:inherit;font-weight:900;font-size:17px;border:0;border-radius:999px;padding:14px 18px;cursor:pointer;margin:12px 0 4px}
-.hand[disabled]{background:var(--line);color:var(--ink2);cursor:default}
-.gift{background:var(--goldbg);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:15.5px;line-height:1.7}.gift b{display:block;color:var(--gold)}
-.ok{display:none;background:var(--soft);border-radius:12px;padding:10px 14px;margin-top:8px;font-weight:700;color:var(--deep)}
-.wait ul{margin:8px 0 0;padding-left:20px;font-size:15.5px;line-height:1.75}
-@media(max-width:640px){.fact b{font-size:19px}}
+.cnt{display:flex;justify-content:space-between;font-size:14px;color:var(--ink2);font-weight:700}
+.cnt b{color:var(--deep);font-size:20px;font-family:"Zen Maru Gothic",sans-serif}
+.hand{display:block;text-align:center;background:#fff;color:var(--deep);border:3px solid var(--deep);text-decoration:none;font-weight:900;font-size:16px;border-radius:999px;padding:13px 16px;margin:10px 0 4px}
+.foot{font-size:14px;color:var(--ink2);text-align:center;margin:30px 0 120px}
+.trust{font-size:14px;line-height:1.8;color:#3e5257;background:var(--soft);border-radius:14px;padding:12px 16px;margin-top:30px}.trust b{color:var(--deep);margin-right:6px}
+.sticky{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9;display:none;text-align:center;background:#06C755;color:#fff;text-decoration:none;font-weight:900;font-size:17px;border-radius:999px;padding:14px 18px;box-shadow:0 10px 24px rgba(0,0,0,.2)}.sticky.on{display:block}
+@media(max-width:380px){.hero{grid-template-columns:1fr 120px}.hero img{width:120px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head>
 <body><div class="wrap">
-<div class="eyebrow" style="margin-top:28px">無料のミニ講座</div>
-<h1>1日5分、7日間。暮らしと仕事で、AIを1つずつ使えるようにする</h1>
-<span class="badge">今日から受け取れます</span>
-<p class="sub">むずかしい設定や専門用語は使いません。夕飯の相談、言いにくいLINE、レシートの写真から毎月のお金。身近なことで1日1つ、AIに頼めることを増やしていきます。</p>
 
-<div class="fact"><div><b>無料</b><span>講座もAIも、無料の範囲で</span></div><div><b>1日5分</b><span>短い動画と、小さな宿題1つ</span></div><div><b>7日間</b><span>最後に「次に任せること」を決める</span></div></div>
+<div class="hero">
+<div>
+<div class="kicker"><span>無料</span><span>1日5分</span><span>7日間</span><span>LINEで毎朝1本</span></div>
+<h1>夕飯の相談も<br>断りのLINEも<br>AIに<em>5分で頼める</em><br>7日間</h1>
+</div>
+<img src="img/mascot_invite.webp" alt="手をふって招くロボ">
+</div>
+<p class="lead">AIとは、話しかけると答えてくれるアプリ（Claude＝クロード、ChatGPTなど）のことです。受け取りはLINEだけ（メールや電話番号は要りません）。AIの利用登録（無料）は1日目に、画面の見本つきで一緒にやります。食費のレシートも、写真で整理できるようになります。</p>
+<p class="who">お金の相談を2,000件受けてきた森川が、暮らしの言葉で案内します（2026年10月時点・社内集計）。この7日間の中で売り込みはしません。投資や商品の勧誘もありません。</p>
+<a class="line" href="https://utage-system.com/line/open/WgtR0dDaK1U4?mtid=0Gs8lOy2WSjB">LINEで1日目（1分）を見る</a>
+<ol class="what"><li>押すと、入力済みの文面が出ます。そのまま「送信」</li><li>1日目の動画（1分）がすぐ届きます</li><li>費用は0円。あとから請求はありません。止めたいときは、LINEのトーク画面から1タップ（ブロック）で止まります</li></ol>
+<div class="chips"><span>スマホだけでOK</span><span>無料のAIで足ります</span><span>宿題は出さなくてOK</span></div>
 
-<h2>7日間でやること</h2>
-<div class="days">
-<div class="day"><i>1日目</i><div><b>アカウントを作って、最初の画面まで</b><small>宿題：「冷蔵庫の中身で、今日の夕飯は何が作れる？」と聞いてみる</small></div></div>
-<div class="day"><i>2日目</i><div><b>上手な聞き方は「自分のことを先に話す」</b><small>宿題：家族のことと悩みを書いてから、相談してみる</small></div></div>
-<div class="day"><i>3日目</i><div><b>言いにくいことを、角を立てずに書く</b><small>宿題：断りのLINEや、お礼の文を作る</small></div></div>
-<div class="day"><i>4日目</i><div><b>写真を読ませる</b><small>宿題：レシートや明細の写真から、毎月出ていくお金を書き出す</small></div></div>
-<div class="day"><i>5日目</i><div><b>自分専用の相棒にする</b><small>宿題：いつも説明していることを、1回だけ覚えさせる</small></div></div>
-<div class="day"><i>6日目</i><div><b>仕事で1つ、手を離す</b><small>宿題：毎週やっている作業を1つ、AIに下書きさせる</small></div></div>
-<div class="day"><i>7日目</i><div><b>僕がリールをAIで週4本回している話</b><small>宿題：次にAIに任せたいことを、1つ決める</small></div></div>
+<h2>まず1分、ためしてみる</h2>
+<p class="sub2">登録しなくても大丈夫。いちばん近いものを1つ選んでください。</p>
+<div class="try">
+<p class="q">いま、どれが面倒ですか？</p>
+<div class="opts" id="opts">
+<button class="opt" data-k="gohan">今日の夕飯</button>
+<button class="opt" data-k="kotowari">断りのLINE</button>
+<button class="opt" data-k="receipt">レシートの山</button>
+<button class="opt" data-k="houkoku">仕事の報告</button>
+</div>
+<div class="ask" id="ask"><b>AIに、このまま貼ってみる</b><p id="asktext"></p><div class="eg"><span>AIの答えの例</span><p id="askeg"></p></div>
+<div class="row"><button type="button" id="cp">この文をコピー</button><a href="https://claude.ai" target="_blank" rel="noopener">Claudeを開く（無料）</a></div>
+<small id="asknote"></small></div>
 </div>
 
-<h2>こんな方に</h2>
-<div class="for">
-<div>AIが気になるけど、何に使えばいいか分からない</div>
-<div>一度さわってみたけど、続かなかった</div>
-<div>家のことも仕事も忙しくて、まとまった時間が取れない</div>
+<h2>7日間で、できるようになること</h2>
+<p class="sub2">1日1つ。できたらカードを押して、スタンプをためてください。</p>
+<div class="path" id="path">
+<div class="day" data-d="1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg></div><div><div class="t">1日目</div><b>夕飯の献立を、AIに相談できる</b><small>利用登録（無料）を画面の見本つきで。最初の一言まで</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></div><div><div class="t">2日目</div><b>「うちの場合は？」が返ってくる聞き方</b><small>自分のことを先に話すコツ</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg></div><div><div class="t">3日目</div><b>言いにくいLINEを、角を立てずに2分で</b><small>断り・お礼・お詫びの文</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="4"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5l1.5-2h5L16 5"/></svg></div><div><div class="t">4日目</div><b>レシートを写真で撮って、毎月のお金が見える</b><small>AIに写真を読ませる</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="5"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16.5h5"/></svg></div><div><div class="t">5日目</div><b>毎回の説明がいらない「自分専用」にする</b><small>自分のことを5行にまとめて、最初に渡すだけ</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="6"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14v16H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><div><div class="t">6日目</div><b>毎週の報告書を、AIの下書きから始められる</b><small>最後に自分で見る。全部は任せない</small></div><div class="seal">できた！</div></div>
+<div class="day" data-d="7"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l14 8-14 8z"/></svg></div><div><div class="t">7日目</div><b>AIに任せる「毎朝の1つ」を決める</b><small>僕がInstagramの動画をAIで作っている裏側つき</small></div><div class="seal">できた！</div></div>
 </div>
-<p class="note">講座ではClaudeという無料で使えるAIを使います。ChatGPTを使っている方も、同じやり方でできます。</p>
+<p class="pathnote">スタンプはこのスマホの中だけに残ります。所要時間や結果は、使い方や状況によって変わります。</p>
 
+<h2>小さく変わること</h2>
+<div class="ba">
+<div><span class="b">ためこんだレシート</span><span class="a">写真を撮るだけで、食費が見える</span></div>
+<div><span class="b">献立に悩む30分</span><span class="a">冷蔵庫の中身で、30秒</span></div>
+<div><span class="b">断りの文を考える夜</span><span class="a">2分で、角の立たない一言</span></div>
+</div>
+
+<h2>森川から</h2>
+<div class="me"><img src="img/mascot_think.webp" alt="考えるロボ"><div>
+<p>僕の会社では、Instagramのリールを週4本、AIが作って投稿しています。でも最初からそうだったわけではなくて、声までAIにしたら「元気がない」と自分でダメを出して、録音は自分に戻しました。</p>
+<p>任せるところと、自分が持つところを分けたら、続けられるようになりました。この7日間は、その「分け方」をいちばん小さな形で体験してもらうものです。</p>
+<p class="nm">森川満章｜fulfull株式会社 代表（横浜）。お金の相談2,000件・講演3,000人。</p>
+</div></div>
+
+<a class="line" href="https://utage-system.com/line/open/WgtR0dDaK1U4?mtid=0Gs8lOy2WSjB">LINEで1日目（1分）を見る</a>
+<p class="hint">登録した直後に1日目、翌日から毎朝7時に1本ずつ届きます。先に中身を見たい方は <a href="https://kinyu-ai-college.vibely.site/courses/fde9233e-66f5-4c2d-aaf4-14a2c7ffa995/chapters">講座のページ</a> へ。</p>
 
 <div class="wait" id="wait">
-<span class="pill">先行案内・準備中</span>
-<h2>「SNSをAIで回す講座」は、手を挙げた人が<span id="goal">30</span>人を超えたら公開します</h2>
-<p>僕がInstagramのリールを週4本、AIで作って投稿している仕組みを、プログラムを書かない人でも真似できる形にした4週間の講座です。自動いいね・自動フォロー・勧誘DMは使いません。公式の機能の範囲で、投稿と返信だけを仕組みにします。</p>
-<ul>
-<li>1週目：Claudeで台本・図解・投稿文を作る（手で予約投稿）</li>
-<li>2週目：型とテンプレートで、週の分をまとめて作る</li>
-<li>3週目：コメントの合言葉にDMで返す仕組み（公式の機能だけ）</li>
-<li>4週目：伸びた投稿と伸びなかった投稿を、AIに毎週比べさせる</li>
-</ul>
-<div class="gift"><b>手を挙げた方への特典</b>僕が実際にリールの台本をAIに書かせている指示文（Claude／ChatGPT用）を、LINEですぐお送りします。貼って元ネタを入れるだけで、60秒の台本と投稿文が出ます。</div>
-<div class="meter"><i id="bar"></i></div>
-<div class="cnt"><span>いま <b id="count">–</b> 人</span><span>公開まで あと <b id="left">–</b> 人</span></div>
-<a class="hand" id="hand" href="https://utage-system.com/line/open/N6XhFH0EO2bW?mtid=kMm3HeTGHVwI">LINEで手を挙げる</a>
-<p class="note" style="margin-top:6px">LINEが開いたら、そのまま「送信」を押してください。それで手を挙げたことになります。</p>
-<p class="note">公開が決まったら、このLINEで最初にお知らせします。</p>
-</div>
-<div class="box">
-<h2>LINEで、毎朝1本ずつ届きます</h2>
-<p>登録した直後に1日目が届き、翌日から毎朝7時に1本ずつ、7日間届きます。動画はログインなしで見られます。</p>
-<a class="btn" style="background:#06C755" href="https://utage-system.com/line/open/WgtR0dDaK1U4?mtid=0Gs8lOy2WSjB">LINEで無料講座を受け取る</a>
-<p class="note" style="margin-top:6px">LINEが開いたら、そのまま「送信」を押してください。それで登録になります。</p>
-<p class="note">先に中身を見たい方は、<a href="https://kinyu-ai-college.vibely.site/courses/fde9233e-66f5-4c2d-aaf4-14a2c7ffa995/chapters">講座のページ</a>からどうぞ（7日分すべて見られます）。</p>
-<p class="note" style="margin-top:10px">お仕事や会社でAIを使いたい方は、<a href="../?ref=IG_ai_free#guide">3問で「最初にAIに渡す仕事」を見る</a>へどうぞ。</p>
+<p class="pill2">7日間とは別のお知らせ（希望した方だけ）</p>
+<h3>続きの講座「SNSをAIで回す」は、30人集まったら公開します</h3>
+<p style="margin:0;font-size:16px">Instagramなどの発信をAIで回したい方向けの4週間の講座を準備しています。有料の予定で、金額は案内の前に必ずお出しします。自動いいね・自動フォロー・勧誘DMは使わず、公式の機能の範囲で、投稿と返信だけを仕組みにします。手を挙げた方には、僕が実際に動画の台本をAIに書かせている指示文をLINEでお送りします。</p>
+<a class="hand" id="hand" href="https://utage-system.com/line/open/N6XhFH0EO2bW?mtid=kMm3HeTGHVwI">続きの講座に、興味ありと伝える</a>
+<p class="hint">LINEが開いたら、そのまま「送信」を押してください。特典（動画の台本をAIに書かせる指示文）が届きます。</p>
 </div>
 
-<p class="note" style="text-align:center;margin:26px 0 40px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
+<p class="hint" style="margin-top:22px">お仕事や会社でAIを使いたい方は、<a href="../?ref=IG_ai_free#guide">3問で「最初にAIに渡す仕事」を見る</a>へどうぞ。</p>
+<div class="trust"><b>運営</b>fulfull株式会社（横浜市青葉区）代表 森川満章。お金の相談2,000件・講演3,000人（2026年10月時点の社内集計）。<br><b>LINEで受け取る情報</b>LINEの表示名だけです。メールや電話番号は受け取りません。配信は、トーク画面から1タップ（ブロック）でいつでも止まります。<br><b>費用</b>この講座とLINEの配信は無料です。使うAI（Claude）も無料の範囲で進めます（2026年10月時点。無料プランには1日の利用量の上限があります）。<br><b>ご注意</b>AIは間違えることがあります。数字や固有名詞は自分の目で確かめてください。レシートなどの写真を撮るときは、カード番号や住所が写らないようにしてください。</div>
+<p class="foot">森川満章｜お金のプロ×AI　Instagram @morikawa_fulfull</p>
+<a class="sticky" id="sticky" href="https://utage-system.com/line/open/WgtR0dDaK1U4?mtid=0Gs8lOy2WSjB">LINEで1日目（1分）を見る</a>
 </div>
 <script>
-const API="https://script.google.com/macros/s/AKfycbz3gLVccJPzvW3WIQNlalxLS6CVGrAwjzO12aTfET5W2XUlmEi1UGhwrOtewnGkxkoxVA/exec"; const COURSE="sns";
+const ASK={gohan:["冷蔵庫に、卵とキャベツと豚肉があります。今日の夕飯、何が作れますか？子どもが辛いのが苦手です。","返ってきたら「15分で作れるものだけ」と一言足してみてください。答えが変わります。","「回鍋肉風の甘みそ炒め、卵とキャベツのお好み焼き、豚とキャベツの重ね蒸し。辛くないのは…」のように、3つくらい返ってきます。"],
+ kotowari:["友だちからのランチの誘いを断りたいです。今月は出費をおさえたいのが本音ですが、関係は大事にしたいです。やわらかく、短めの断りの文を3案ください。","いちばん近い案を、自分の言葉に少し直して送れば完成です。","「誘ってくれてありがとう！今月はちょっと控えめにしてて…来月あらためて誘わせて」のような案が3つ出ます。"],
+ receipt:["このレシートの写真を読んで、項目と金額を表にしてください。食費・日用品・それ以外に分けてください。","写真を一緒に送ります。カードの番号や住所は隠して撮ってください。","「食費 1,284円／日用品 418円／それ以外 0円、合計 1,702円」のような表が返ってきます。合計は自分の目で確かめます。"],
+ houkoku:["今週の会議のメモを貼ります。「決まったこと」と「次にやること」に分けて、箇条書きでまとめてください。","メモは、そのまま貼って大丈夫です。会社の情報を入れてよいかは、会社のルールを確かめてから。","「決まったこと：…／次にやること：…（担当・いつまで）」の形で、箇条書きが返ってきます。"]};
 const $=id=>document.getElementById(id);
-function show(c,g){g=g||30;$("goal").textContent=g;$("count").textContent=c;$("left").textContent=Math.max(0,g-c);$("bar").style.width=Math.min(100,Math.round(c/g*100))+"%";}
-async function load(){try{const r=await fetch(API+"?course="+COURSE,{cache:"no-store"});const j=await r.json();if(j.ok)show(j.count,j.goal)}catch(e){}}
-$("hand").addEventListener("click",()=>{let done=false;try{done=localStorage.getItem("hand_"+COURSE)==="1";localStorage.setItem("hand_"+COURSE,"1")}catch(e){}
- if(!done){try{navigator.sendBeacon?fetch(API,{method:"POST",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({course:COURSE,src:location.search.slice(1)||"direct",ua:navigator.userAgent.slice(0,40)})}):0}catch(e){}}});
-load();
+document.querySelectorAll('.opt').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.opt').forEach(x=>x.classList.remove('on'));b.classList.add('on');const a=ASK[b.dataset.k];$('asktext').textContent=a[0];$('asknote').textContent=a[1];$('askeg').textContent=a[2];$('ask').classList.add('show');}));
+$('cp').addEventListener('click',()=>{const t=$('asktext').textContent;const b=$('cp');const ok=()=>{b.textContent='コピーしました';setTimeout(()=>b.textContent='この文をコピー',1600)};try{navigator.clipboard.writeText(t).then(ok,ok)}catch(e){ok()}});
+let done={};try{done=JSON.parse(localStorage.getItem('free7')||'{}')}catch(e){}
+document.querySelectorAll('.day').forEach(d=>{const k=d.dataset.d;if(done[k])d.classList.add('done');d.addEventListener('click',()=>{d.classList.toggle('done');done[k]=d.classList.contains('done');try{localStorage.setItem('free7',JSON.stringify(done))}catch(e){}})});
+const API="https://script.google.com/macros/s/AKfycbz3gLVccJPzvW3WIQNlalxLS6CVGrAwjzO12aTfET5W2XUlmEi1UGhwrOtewnGkxkoxVA/exec";const COURSE="sns";
+function show(c,g){}
+(async()=>{try{const r=await fetch(API+"?course="+COURSE,{cache:"no-store"});const j=await r.json();if(j.ok)show(j.count,j.goal)}catch(e){}})();
+const hero=document.querySelector('.line');new IntersectionObserver(e=>{document.getElementById('sticky').classList.toggle('on',!e[0].isIntersecting&&scrollY>600)},{threshold:0}).observe(hero);
+$("hand").addEventListener("click",()=>{let d=false;try{d=localStorage.getItem("hand_"+COURSE)==="1";localStorage.setItem("hand_"+COURSE,"1")}catch(e){}
+ if(!d){try{fetch(API,{method:"POST",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({course:COURSE,src:location.search.slice(1)||"direct",ua:navigator.userAgent.slice(0,40)})})}catch(e){}}});
 </script></body></html>
