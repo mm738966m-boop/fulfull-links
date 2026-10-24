@@ -1,0 +1,80 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>リールの台本をAIに書かせる指示文（先行案内の特典）｜森川満章</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="リールの台本をAIに書かせる指示文"><meta property="og:description" content="僕が実際に使っている、Instagramリールの台本をClaude／ChatGPTに書かせる指示文。貼って、話の元ネタを入れるだけ。"><meta property="og:type" content="article"><meta property="og:image" content="https://mm738966m-boop.github.io/fulfull-links/ig/ai/reel/frames.webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"><link rel="stylesheet" href="../../../base.css">
+<style>
+.sub{font-size:17px;color:var(--ink2);margin:10px 0 0}
+.steps{display:grid;gap:10px;margin:12px 0}.steps div{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;background:var(--soft);border-radius:14px;padding:12px 14px}
+.steps i{font-style:normal;width:44px;height:44px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px}
+.steps b{display:block;color:var(--deep)}
+.promptbox{position:relative;background:#fff;border:2px solid var(--line);border-radius:16px;padding:14px 16px;margin:12px 0}
+textarea{width:100%;min-height:420px;font:inherit;font-size:15px;line-height:1.75;border:0;resize:vertical;background:transparent;color:var(--ink)}
+.copy{display:block;width:100%;text-align:center;background:var(--deep);color:#fff;font:inherit;font-weight:900;font-size:17px;border:0;border-radius:999px;padding:14px 18px;cursor:pointer;margin:10px 0 4px}
+.fill{display:grid;gap:8px;margin:12px 0}.fill div{background:#fff;border:2px solid var(--line);border-radius:12px;padding:10px 14px;font-size:15.5px}
+.fill b{color:var(--deep)}
+.ng{background:#FFF8F0;border:2px solid #f0c9a8;border-radius:14px;padding:12px 16px;font-size:15.5px;line-height:1.75}
+.ng b{color:#b4480f;display:block}
+</style></head>
+<body><div class="wrap">
+<div class="eyebrow" style="margin-top:28px">先行案内の特典</div>
+<h1>リールの台本をAIに書かせる、僕が実際に使っている指示文</h1>
+<p class="sub">Instagramのリールを週4本、AIで作って投稿している仕組みの「台本を書く部分」です。Claudeでも、ChatGPTでも使えます。貼って、話の元ネタを入れるだけで、60秒のリールの台本と投稿文が出ます。</p>
+
+<h2>使い方</h2>
+<div class="steps">
+<div><i>1</i><div><b>下の指示文を「全文をコピー」する</b>ClaudeかChatGPTを開いて、そのまま貼ります。</div></div>
+<div><i>2</i><div><b>【　】の4か所を自分のことに書き換える</b>あなたの名前と肩書き、見てほしい人、一人称、合言葉。</div></div>
+<div><i>3</i><div><b>最後の【元ネタ】に、話を入れる</b>伸びた投稿の本文、お客さまから聞いた話（許可を取って、特定できない形で）、スマホに向かって5分喋った録音の文字起こし、どれでも。</div></div>
+</div>
+
+<div class="promptbox">
+<textarea id="pt" readonly>あなたは、日本のInstagramリール（縦動画・60秒前後・本人の声で読む）の構成作家です。
+発信者：【あなたの名前と肩書き。例：森川満章（お金の相談2,000件・講演3,000人）】。一人称は「【僕／私】」。
+見てほしい人：【例：30〜50代の夫婦・子育て世代】。
+
+【絶対に守ること】
+1. 事実は、最後の【元ネタ】に書かれていることだけを使う。人物・金額・年数・セリフを新しく作らない。計算で出せる数字（差額・割合・合計）は使ってよい。
+2. 冒頭3秒は、次の型から、この話にいちばん合うものを選ぶ：(a)損の名指し (b)答えが割れる問い (c)意外な数字の対比 (d)続きが気になる場面（結末を伏せた一場面）。まず候補を3つ書き、止める力が一番強いものを採用する。挨拶・自己紹介から入らない。5秒以内に「あなた」に触れる。
+3. 構成は、合計7〜9段落、ナレーション合計300〜380字（読んで45〜60秒）：
+   冒頭 → 状況（数字）→ 展開（数字の比較）→ なぜ？見落とし → 気づき（短い言い切り）→ 保存したくなる早見表（1回だけ）→ 「正解は人それぞれ」＋現場の一言 → AとBの二択でコメントを促し、保存も促す。
+4. 口調：やさしく言い切る。煽らない。教科書口調にしない。発信者の口ぐせを1〜2回だけ自然に入れる。
+5. 画面の大見出しは、毎回「その場面の結論」を短く（1行9文字まで、最大4行）。「あなたへ」「実際にあった話です」だけのような中身のない画面は作らない。
+6. 読み上げの事故を避ける：「月◯万」は「毎月◯万」と書く。記号（→ ／ ＝ ％）はナレーションに入れない。
+7. 使わない言葉：絶対／必ず儲かる／確実に増える／元本保証／不労所得／誰でも稼げる／即金／爆益／ノーリスク／一攫千金／簡単に稼げる／損しない。
+8. 画面の種類は7種類以上を混ぜる（大見出し／大きな数字／棒グラフ／LINE風の会話（元ネタにあるセリフだけ）／年表／早見表／二択／最後の呼びかけ）。同じ種類を3回続けない。大見出しだけの画面は全体の3分の1以下。
+
+【出力の形】
+1. 冒頭の候補3つと、採用した型
+2. 台本：段落ごとに「ナレーション」と「画面（種類・大見出し・補足）」を並べる
+3. 表紙の文字：1行7文字以内で2行＋いちばん強い数字（8文字以内）＋状況20字以内
+4. Instagramの投稿文：1〜2行目は冒頭の場面と一番強い数字 → 空行 → 経緯を短い行で → 元ネタのセリフを1つ「」で → 発信者の一言（元ネタにあるものだけ）→「あなたはどっちですか？ A：〜 B：〜 コメントで『A』か『B』だけでも教えてください。」→ 保存のお願い（見返す場面つき）→「―――」→ 合言葉の案内「【例：欲しい方はコメントに『設計ノート』と書いてください。DMでお送りします。】」→ ハッシュタグ5個。1行は短く、句点ごとに改行。「**」などの記号は使わない。
+5. 使った事実を、元ネタから抜き出して列挙する（作り話が混じっていないかを自分で確かめるため）。
+
+【元ネタ】
+（ここに、伸びた投稿の本文、お客さまから聞いた話、喋った録音の文字起こし、などを貼る）</textarea>
+<button type="button" class="copy" id="cp">全文をコピー</button>
+</div>
+
+<h2>書き換える4か所</h2>
+<div class="fill">
+<div><b>名前と肩書き</b>：数字が入ると強い（相談◯件・◯年・お客さま◯人）。盛らない。</div>
+<div><b>見てほしい人</b>：年代と立場を1つに絞る（例：40代の共働き夫婦）。</div>
+<div><b>一人称</b>：ふだん話すときの言い方に。</div>
+<div><b>合言葉</b>：コメントに書いてもらう1語と、DMで送るもの。送るものがまだ無ければ、この行ごと消してよい。</div>
+</div>
+
+<h2>気をつけること</h2>
+<div class="ng">
+<b>作り話を入れない</b>AIは元ネタに無い数字やセリフを足しがちです。出力の最後の「使った事実」を、元ネタと見比べてください。合っていないものは消します。
+<b style="margin-top:8px">お客さまの話は、許可を取って、特定できない形で</b>名前・地域・会社名は出さない。金額は切りのいい数字に丸める。
+<b style="margin-top:8px">自動いいね・自動フォロー・勧誘DMはしない</b>投稿と返信を仕組みにするだけで十分に回ります。規約の外に出ると、アカウントごと失います。
+</div>
+
+<p class="note" style="margin:18px 0 0">僕のリールでは、この指示文で出た台本を本人が読んで録音し、声に合わせて画面が切り替わる動画をAIが作って、夜8時に自動で投稿しています。その全体像は <a href="../../reel/">こちら</a>。</p>
+<p class="note" style="text-align:center;margin:26px 0 40px">森川満章｜お金のプロ×AI　相談2,000件・講演3,000人<br>Instagram @morikawa_fulfull</p>
+</div>
+<script>
+document.getElementById("cp").addEventListener("click",()=>{const t=document.getElementById("pt");const b=document.getElementById("cp");const ok=()=>{b.textContent="コピーしました";setTimeout(()=>b.textContent="全文をコピー",1600)};
+try{navigator.clipboard.writeText(t.value).then(ok,()=>{t.select();ok()})}catch(e){t.select();ok()}});
+</script></body></html>
